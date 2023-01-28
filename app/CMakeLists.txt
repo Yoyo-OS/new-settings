@@ -17,9 +17,9 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core Quick LinguistTools REQUIRED)
 
 # load interfaces
 set(INTERFACES_FILES
-                ../include/interfaceplugin.h
-                ../include/pluginMetaData.h
-                ../include/dataObject.h
+                ../include/yoyo-settings/interfaceplugin.h
+                ../include/yoyo-settings/pluginMetaData.h
+                ../include/yoyo-settings/dataObject.h
 )
 
 set(PROJECT_SOURCES

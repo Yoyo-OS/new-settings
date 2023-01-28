@@ -3,7 +3,7 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QGuiApplication>
-#include"../../include/interfaceplugin.h"
+#include"../../include/yoyo-settings/interfaceplugin.h"
 
 // 加载所有插件
 QDir QtPluginsManager::getPluginPath()
@@ -81,6 +81,8 @@ void QtPluginsManager::loadPlugin(const QString& path)
             delete loader;
             loader = Q_NULLPTR;
         }
+    }else{
+        qDebug()<<loader->errorString();
     }
 }
 

@@ -14,7 +14,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Gui REQUIRED)
 
 
 add_library(demoA SHARED
-    ../../include/dataObject.h
+    ../../include/yoyo-settings/dataObject.h
     test.cpp
     qml/qml.qrc
     demoa.cpp
