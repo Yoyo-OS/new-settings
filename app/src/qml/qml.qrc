@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>IconButton.qml</file>
+        <file>ItemPage.qml</file>
+        <file>RoundedItem.qml</file>
+        <file>Scrollable.qml</file>
+        <file>SideBar.qml</file>
+        <file>StandardButton.qml</file>
+        <file>StandardItem.qml</file>
+    </qresource>
+</RCC>
