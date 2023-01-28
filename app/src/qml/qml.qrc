@@ -8,5 +8,6 @@
         <file>SideBar.qml</file>
         <file>StandardButton.qml</file>
         <file>StandardItem.qml</file>
+        <file>IconCheckBox.qml</file>
     </qresource>
 </RCC>
