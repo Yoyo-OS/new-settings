@@ -88,6 +88,7 @@ void Application::insertPlugin()
          qDebug() << "未能找到插件";
         }
     }
+    dataList = listSort(dataList);
 }
 
 void Application::switchToPage(const QString &name)
@@ -97,4 +98,25 @@ void Application::switchToPage(const QString &name)
     if (mainObject) {
         QMetaObject::invokeMethod(mainObject, "switchPageFromName", Q_ARG(QVariant, name));
     }
+}
+
+//列表排序函数
+QList<QObject*> Application::listSort(QList<QObject*> list)
+{
+    QList<QObject*> new_list;
+    //遍历列表
+    QListIterator<QObject*> it(list);
+    for(it.toFront(); it.hasNext();)
+    {
+        //强制类型转换，转为派生类
+        DataObject* m_obj = dynamic_cast<DataObject*>(it.next());
+
+        //插件名
+        qDebug()<<m_obj->name();
+        //插件分类名
+        qDebug()<<m_obj->category();
+
+        //留给uni做排序
+    }
+    return new_list;
 }

@@ -146,11 +146,12 @@ Item {
 
                     Rectangle {
                         id: iconRect
-                        width: 24
-                        height: 24
+                        width: 26
+                        height: 26
                         Layout.alignment: Qt.AlignVCenter
-                        radius: 6
+                        radius: width /2
                         color: model.iconColor
+                        //color: FishUI
 
                         gradient: Gradient {
                             GradientStop { position: 0.0; color: Qt.lighter(model.iconColor, 1.15) }
@@ -160,9 +161,9 @@ Item {
                         Image {
                             id: icon
                             anchors.centerIn: parent
-                            width: 16
+                            width: 14
                             height: width
-                            source: "qrc:/images/sidebar/dark/" + model.iconSource
+                            source: model.iconSource
                             sourceSize: Qt.size(width, height)
                             Layout.alignment: Qt.AlignVCenter
                             antialiasing: false

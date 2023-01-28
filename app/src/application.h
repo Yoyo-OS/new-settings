@@ -32,6 +32,7 @@ public:
 
 private:
     void insertPlugin();
+    QList<QObject*> listSort(QList<QObject*> list);
     QList<QObject*> dataList;
     QQmlApplicationEngine m_engine;
 };
