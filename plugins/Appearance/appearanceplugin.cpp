@@ -16,12 +16,14 @@ QList<QObject*> AppearancePlugin::dataList()
     DataObject *data1 = new DataObject(this);
     data1->setName("appearance");
     data1->setTitle(tr("Appearance"));
+    data1->setIconId("\ue40a");
     data1->setPage("qrc:/appearance/appearance.qml");
     data1->setCategory(DISPLAYANDAPPEARANCE);
     dataList.append(data1);
     DataObject *data2 = new DataObject(this);
     data2->setName("wallpaper");
     data2->setTitle(tr("Wallpaper"));
+    data2->setIconId("\ue1bc");
     data2->setPage("qrc:/appearance/wallpaper.qml");
     data2->setCategory(DISPLAYANDAPPEARANCE);
     dataList.append(data2);

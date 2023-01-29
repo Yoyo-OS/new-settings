@@ -155,13 +155,13 @@ Item {
                         //color: model.iconColor
                         color: FishUI.Theme.highlightColor
 
-                        Image {
+                        FishUI.MaterialIcons{
                             id: icon
                             anchors.centerIn: parent
-                            width: 14
-                            height: width
-                            source: model.iconSource
-                            sourceSize: Qt.size(width, height)
+                            iconId: model.iconId
+                            //iconId: "\ue30a"
+                            color: "#FFFFFF"
+                            iconSize: 12
                             Layout.alignment: Qt.AlignVCenter
                             antialiasing: false
                             smooth: false

@@ -9,7 +9,7 @@
  * Copyright (c) 2022 by YoyoOS, All Rights Reserved.
  */
 #include "application.h"
-
+#include <QFontDatabase>
 Application::Application(int &argc, char **argv)
     : QGuiApplication(argc, argv)
 {

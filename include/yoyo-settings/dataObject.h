@@ -11,7 +11,7 @@ class DataObject : public QObject
     Q_PROPERTY(QString title READ title WRITE setTitle NOTIFY titleChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(QString page READ page WRITE setPage NOTIFY pageChanged)
-    Q_PROPERTY(QString iconSource READ iconSource WRITE setIconSource NOTIFY iconSourceChanged)
+    Q_PROPERTY(QString iconId READ iconId WRITE setIconId NOTIFY iconIdChanged)
     Q_PROPERTY(short category READ category WRITE setCategory NOTIFY categoryChanged)
 
 public:
@@ -22,21 +22,21 @@ public:
     void setName(const QString &name) { m_name = name; emit nameChanged();} ;
     QString page()const { return m_page; } ;
     void setPage(const QString &page) { m_page = page; emit pageChanged();} ;
-    QString iconSource()const { return m_iconSource; } ;
-    void setIconSource(const QString &iconSource) { m_iconSource = iconSource; emit iconSourceChanged();} ;
+    QString iconId()const { return m_iconId; } ;
+    void setIconId(const QString &iconId) { m_iconId = iconId; emit iconIdChanged();} ;
     short category()const { return m_category; } ;
     void setCategory(const short &category) { m_category = category; emit categoryChanged();} ;
 signals:
     void nameChanged();
     void titleChanged();
     void pageChanged();
-    void iconSourceChanged();
+    void iconIdChanged();
     void categoryChanged();
 private:
     QString m_title;
     QString m_name;
     QString m_page;
-    QString m_iconSource;
+    QString m_iconId;
     short m_category;
 };
 
