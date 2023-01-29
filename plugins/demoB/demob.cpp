@@ -15,14 +15,14 @@ QList<QObject*> DEMOB::dataList()
     data1->setTitle("DemoB");
     data1->setIconColor(QColor("#000000"));
     data1->setPage("qrc:/demo2/main.qml");
-    data1->setCategory("Test");
+    data1->setCategory(TEST);
     dataList.append(data1);
     DataObject *data2 = new DataObject(this);
     data2->setName("demoBBBBBBb");
     data2->setTitle("DemoBBBBBBBBBBBBBB");
     data2->setIconColor(QColor("#000000"));
     data2->setPage("qrc:/demo2/main.qml");
-    data2->setCategory("Test");
+    data2->setCategory(TEST);
     dataList.append(data2);
     return dataList;
 }

@@ -13,7 +13,7 @@ class DataObject : public QObject
     Q_PROPERTY(QString page READ page WRITE setPage NOTIFY pageChanged)
     Q_PROPERTY(QString iconSource READ iconSource WRITE setIconSource NOTIFY iconSourceChanged)
     Q_PROPERTY(QColor iconColor READ iconColor WRITE setIconColor NOTIFY iconColorChanged)
-    Q_PROPERTY(QString category READ category WRITE setCategory NOTIFY categoryChanged)
+    Q_PROPERTY(short category READ category WRITE setCategory NOTIFY categoryChanged)
 
 public:
     explicit DataObject(QObject *parent = nullptr) { };
@@ -25,8 +25,8 @@ public:
     void setPage(const QString &page) { m_page = page; emit pageChanged();} ;
     QString iconSource()const { return m_iconSource; } ;
     void setIconSource(const QString &iconSource) { m_iconSource = iconSource; emit iconSourceChanged();} ;
-    QString category()const { return m_category; } ;
-    void setCategory(const QString &category) { m_category = category; emit categoryChanged();} ;
+    short category()const { return m_category; } ;
+    void setCategory(const short &category) { m_category = category; emit categoryChanged();} ;
     QColor iconColor()const { return m_color; } ;
     void  setIconColor(const QColor &color) { m_color = color; emit iconColorChanged();} ;
 signals:
@@ -42,7 +42,7 @@ private:
     QColor m_color;
     QString m_page;
     QString m_iconSource;
-    QString m_category;
+    short m_category;
 };
 
 #endif // DATAOBJECT_H

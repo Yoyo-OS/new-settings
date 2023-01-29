@@ -30,7 +30,9 @@ Item {
 
     property alias view: listView
     property alias currentIndex: listView.currentIndex
+    property color wallpaperColor
 
+    property var category: [qsTr("Network and connection"),qsTr("Display and appearance"),qsTr("System"),qsTr("Test")]
     Rectangle {
         anchors.fill: parent
         color: FishUI.Theme.darkMode ? Qt.lighter(FishUI.Theme.backgroundColor, 1.5)
@@ -101,7 +103,7 @@ Item {
                     anchors.bottomMargin: FishUI.Units.smallSpacing
                     color: FishUI.Theme.disabledTextColor
                     font.pointSize: 8
-                    text: section
+                    text: category[section]
                 }
             }
 
@@ -150,13 +152,8 @@ Item {
                         height: 26
                         Layout.alignment: Qt.AlignVCenter
                         radius: width /2
-                        color: model.iconColor
-                        //color: FishUI
-
-                        gradient: Gradient {
-                            GradientStop { position: 0.0; color: Qt.lighter(model.iconColor, 1.15) }
-                            GradientStop { position: 1.0; color: model.iconColor }
-                        }
+                        //color: model.iconColor
+                        color: FishUI.Theme.highlightColor
 
                         Image {
                             id: icon

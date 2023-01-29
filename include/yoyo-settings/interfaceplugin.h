@@ -6,6 +6,12 @@
 #include <QColor>
 #include <QList>
 #include "pluginMetaData.h"
+
+#define NETWORKANDCONNECTION 0
+#define DISPLAYANDAPPEARANCE 1
+#define SYSTEM 2
+#define TEST 3
+
 //定义接口
 class InterfacePlugin
 {

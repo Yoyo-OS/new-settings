@@ -67,6 +67,11 @@ void Application::insertPlugin()
     QtPluginsManager::getInstance().loadAllPlugins();
     QtPluginsManager::getInstance().initSignalAndSlot();
 
+    QList<QObject*> dataList0;
+    QList<QObject*> dataList1;
+    QList<QObject*> dataList2;
+    QList<QObject*> dataList3;
+
     QList<QPluginLoader *> allPlugins = QtPluginsManager::getInstance().allPlugins();
     QListIterator<QPluginLoader *> it(allPlugins);
     for(it.toFront(); it.hasNext();)
@@ -79,8 +84,27 @@ void Application::insertPlugin()
             InterfacePlugin *ifp = qobject_cast<InterfacePlugin*>(obj);
             if(ifp->enabled())
             {
-                dataList.append(ifp->dataList());
-                qDebug()<<ifp->dataList();
+                QList<QObject*> pluginDataList = ifp->dataList();
+                QListIterator<QObject *> it1(pluginDataList);
+                for(it1.toFront(); it1.hasNext();)
+                {
+                    DataObject* m_obj = dynamic_cast<DataObject*>(it1.next());
+                    qDebug()<<m_obj->category();
+                    switch (m_obj->category()) {
+                        case 0:
+                            dataList0.append(m_obj);
+                            break;
+                        case 1:
+                            dataList1.append(m_obj);
+                            break;
+                        case 2:
+                            dataList2.append(m_obj);
+                            break;
+                        case 3:
+                            dataList3.append(m_obj);
+                            break;
+                    }
+                }
             }
         }
         else
@@ -88,7 +112,8 @@ void Application::insertPlugin()
          qDebug() << "未能找到插件";
         }
     }
-    dataList = listSort(dataList);
+    dataList<<dataList0<<dataList1<<dataList2<<dataList3;
+    //dataList = listSort(dataList);
 }
 
 void Application::switchToPage(const QString &name)
