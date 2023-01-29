@@ -62,11 +62,13 @@ Item {
         anchors.margins: FishUI.Units.smallSpacing
         spacing: FishUI.Units.largeSpacing
 
-        Image {
-            width: 22
-            height: width
-            sourceSize: Qt.size(width, height)
-            source: "qrc:/images/" + (FishUI.Theme.darkMode ? "dark/" : "light/") + "network-wired.svg"
+        Label{
+            font.family: "FluentSystemIcons-Regular"
+            color: FishUI.Theme.textColor
+            font.pixelSize: 20
+            antialiasing: false
+            smooth: false
+            text: "\uf0f5"
         }
 
         Label {
@@ -75,20 +77,14 @@ Item {
         }
 
         // Activated
-        Image {
-            width: 16
-            height: width
-            sourceSize: Qt.size(width, height)
-            source: "qrc:/images/light/checked.svg"
+        Label{
+            font.family: "FluentSystemIcons-Regular"
+            color: FishUI.Theme.highlightColor
+            font.pixelSize: 20
+            antialiasing: false
+            smooth: false
             visible: model.connectionState === NM.NetworkModel.Activated
-
-            ColorOverlay {
-                anchors.fill: parent
-                source: parent
-                color: FishUI.Theme.highlightColor
-                opacity: 1
-                visible: true
-            }
+            text: "\uf295"
         }
     }
 }

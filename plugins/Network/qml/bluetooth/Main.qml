@@ -186,13 +186,13 @@ ItemPage {
                                     anchors.fill: parent
                                     anchors.rightMargin: FishUI.Units.smallSpacing
 
-                                    Image {
-                                        width: 16
-                                        height: 16
-                                        sourceSize: Qt.size(16, 16)
-                                        source: FishUI.Theme.darkMode ? "qrc:/images/sidebar/dark/bluetooth.svg"
-                                                                      : "qrc:/images/sidebar/light/bluetooth.svg"
-                                        Layout.alignment: Qt.AlignVCenter
+                                    Label{
+                                        font.family: "FluentSystemIcons-Regular"
+                                        color: FishUI.Theme.textColor
+                                        font.pixelSize: 20
+                                        antialiasing: false
+                                        smooth: false
+                                        text: "\uf1df"
                                     }
 
                                     Label {

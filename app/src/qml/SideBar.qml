@@ -155,13 +155,13 @@ Item {
                         //color: model.iconColor
                         color: FishUI.Theme.highlightColor
 
-                        FishUI.MaterialIcons{
+                        Label{
                             id: icon
                             anchors.centerIn: parent
-                            iconId: model.iconId
-                            //iconId: "\ue30a"
+                            text: model.iconId
+                            font.family: "FluentSystemIcons-Regular"
                             color: "#FFFFFF"
-                            iconSize: 12
+                            font.pixelSize: 16
                             Layout.alignment: Qt.AlignVCenter
                             antialiasing: false
                             smooth: false

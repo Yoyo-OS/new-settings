@@ -138,30 +138,25 @@ Item {
                 }
 
                 // Activated
-                Image {
-                    width: 16
-                    height: width
-                    sourceSize: Qt.size(width, height)
-                    source: "qrc:/images/light/checked.svg"
+                Label{
+                    font.family: "FluentSystemIcons-Regular"
+                    color: FishUI.Theme.highlightColor
+                    font.pixelSize: 20
+                    antialiasing: false
+                    smooth: false
                     visible: model.connectionState === NM.Enums.Activated
-
-                    ColorOverlay {
-                        anchors.fill: parent
-                        source: parent
-                        color: FishUI.Theme.highlightColor
-                        opacity: 1
-                        visible: true
-                    }
+                    text: "\uf295"
                 }
 
                 // Locked
-                Image {
-                    width: 22
-                    height: width
-                    sourceSize: Qt.size(width, height)
-                    source: FishUI.Theme.darkMode ? "qrc:/images/dark/locked.svg" : "qrc:/images/light/locked.svg"
-                    visible: (model.securityType === -1 | model.securityType === 0) ? false : true
+                Label{
+                    font.family: "FluentSystemIcons-Regular"
+                    color: FishUI.Theme.textColor
+                    font.pixelSize: 22
+                    antialiasing: false
                     smooth: false
+                    visible: (model.securityType === -1 | model.securityType === 0) ? false : true
+                    text: "\ue790"
                 }
 
                 IconButton {
