@@ -2,22 +2,399 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
+    <name>AppearancePlugin</name>
+    <message>
+        <source>Appearance</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Wallpaper</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>ConnectDialog</name>
+    <message>
+        <source>Enter Password</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Enter the password for %1</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Connect</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Main</name>
+    <message>
+        <source>WLAN</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Add other...</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Ethernet</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Bluetooth</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Pairing unsuccessful</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Connecting Unsuccessful</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>My devices</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Other devices</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Connected</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Not Connected</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Connect</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Disconnect</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Forget This Device</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Proxy</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>No Proxy</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Use proxy auto configuration URL</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Use manually specified proxy configuration</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Select file</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>HTTP Proxy</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Port</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Also use this proxy for FTP</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>FTP Proxy</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>SOCKS Proxy</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Save</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>NetworkPlugin</name>
+    <message>
+        <source>WLAN</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Ethernet</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Bluetooth</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Proxy</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>NewNetworkDialog</name>
+    <message>
+        <source>Name</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Network Name</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Security</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>UserName</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Join</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>PairDialog</name>
+    <message>
+        <source>Bluetooth Pairing Request</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>OK</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>QObject</name>
+    <message>
+        <source>Vendor default</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Slight</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Full</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
     <name>SideBar</name>
     <message>
         <source>Network and connection</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Display and appearance</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Test</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>WifiItem</name>
+    <message>
+        <source>Password</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Connect</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Disconnect</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>WifiView</name>
+    <message>
+        <source>WLAN</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>WirelessDetailsDialog</name>
+    <message>
+        <source>Auto-Join</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Security</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Signal</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>IPv4 Address</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>IPv6 Address</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>MAC Address</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Gateway</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>DNS</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Close</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Forget this network</source>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>appearance</name>
+    <message>
+        <source>Appearance</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Theme</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Light</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Dark</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Dim the wallpaper in dark theme</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>System effects</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Minimize animation</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Default</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Magic Lamp</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Accent color</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Fonts</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>General Font</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Fixed Font</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Font Size</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Small</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Medium</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Large</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Huge</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Hinting</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Anti-Aliasing</source>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -28,11 +405,30 @@
     </message>
     <message>
         <source>Settings</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Appearance</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
+    </message>
+</context>
+<context>
+    <name>wallpaper</name>
+    <message>
+        <source>Background</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Background type</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Picture</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Color</source>
+        <translation></translation>
     </message>
 </context>
 </TS>

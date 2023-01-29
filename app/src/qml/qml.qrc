@@ -9,5 +9,7 @@
         <file>StandardButton.qml</file>
         <file>StandardItem.qml</file>
         <file>IconCheckBox.qml</file>
+        <file>Hideable.qml</file>
+        <file>HorizontalDivider.qml</file>
     </qresource>
 </RCC>

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/appearance">
+        <file>appearance.qml</file>
+        <file>wallpaper.qml</file>
+        <file>DesktopPreview.qml</file>
+    </qresource>
+</RCC>

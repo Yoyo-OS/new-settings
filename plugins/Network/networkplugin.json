@@ -1,0 +1,9 @@
+{
+    "author" : "yzzi",
+    "date" : "2023/01/29",
+    "api" : "0.0.1",
+    "name" : "Network",
+    "version" : "1.0.0",
+    "des" : "网络相关插件",
+    "dependencies" : []
+}

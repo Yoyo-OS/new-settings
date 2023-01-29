@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/network">
+        <file>wlan/ConnectDialog.qml</file>
+        <file>wlan/Main.qml</file>
+        <file>wlan/NewNetworkDialog.qml</file>
+        <file>wlan/WifiItem.qml</file>
+        <file>wlan/WifiView.qml</file>
+        <file>wlan/WirelessDetailsDialog.qml</file>
+        <file>wired/Main.qml</file>
+        <file>wired/WiredItem.qml</file>
+        <file>bluetooth/Main.qml</file>
+        <file>bluetooth/PairDialog.qml</file>
+        <file>proxy/Main.qml</file>
+    </qresource>
+</RCC>
