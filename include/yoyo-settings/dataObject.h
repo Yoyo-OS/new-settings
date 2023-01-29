@@ -12,7 +12,6 @@ class DataObject : public QObject
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
     Q_PROPERTY(QString page READ page WRITE setPage NOTIFY pageChanged)
     Q_PROPERTY(QString iconSource READ iconSource WRITE setIconSource NOTIFY iconSourceChanged)
-    Q_PROPERTY(QColor iconColor READ iconColor WRITE setIconColor NOTIFY iconColorChanged)
     Q_PROPERTY(short category READ category WRITE setCategory NOTIFY categoryChanged)
 
 public:
@@ -27,19 +26,15 @@ public:
     void setIconSource(const QString &iconSource) { m_iconSource = iconSource; emit iconSourceChanged();} ;
     short category()const { return m_category; } ;
     void setCategory(const short &category) { m_category = category; emit categoryChanged();} ;
-    QColor iconColor()const { return m_color; } ;
-    void  setIconColor(const QColor &color) { m_color = color; emit iconColorChanged();} ;
 signals:
     void nameChanged();
     void titleChanged();
     void pageChanged();
     void iconSourceChanged();
-    void iconColorChanged();
     void categoryChanged();
 private:
     QString m_title;
     QString m_name;
-    QColor m_color;
     QString m_page;
     QString m_iconSource;
     short m_category;

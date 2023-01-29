@@ -13,7 +13,6 @@ QList<QObject*> DEMOA::dataList()
     DataObject *data1 = new DataObject(this);
     data1->setName("demoa");
     data1->setTitle("DemoA");
-    data1->setIconColor(QColor("#000000"));
     data1->setPage("qrc:/demo1/main.qml");
     data1->setCategory(TEST);
     dataList<<data1;
