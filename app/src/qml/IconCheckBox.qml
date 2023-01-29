@@ -46,8 +46,8 @@ Item {
 
         Rectangle {
             id: _box
-            width: control.iconSize
-            height: width
+            width: height * 1.25
+            height: control.iconSize
             color: "transparent"
             border.width: 3
             border.color: control.checked ? FishUI.Theme.highlightColor : "transparent"

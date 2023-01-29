@@ -65,17 +65,27 @@ ItemPage {
                     spacing: FishUI.Units.largeSpacing * 2
 
                     IconCheckBox {
-                        source: "qrc:/images/light_mode.svg"
+                        iconSize: 140
+                        source: "qrc:/appearance/images/lightmode.png"
                         text: qsTr("Light")
                         checked: !FishUI.Theme.darkMode
                         onClicked: appearance.switchDarkMode(false)
                     }
 
                     IconCheckBox {
-                        source: "qrc:/images/dark_mode.svg"
+                        iconSize: 140
+                        source: "qrc:/appearance/images/darkmode.png"
                         text: qsTr("Dark")
                         checked: FishUI.Theme.darkMode
                         onClicked: appearance.switchDarkMode(true)
+                    }
+
+                    IconCheckBox {
+                        iconSize: 140
+                        source: "qrc:/appearance/images/automode.png"
+                        text: qsTr("Auto")
+                        //checked: FishUI.Theme.darkMode
+                        //onClicked: appearance.switchDarkMode(true)
                     }
                 }
 
@@ -164,7 +174,6 @@ ItemPage {
                     model: ListModel {}
 
                     property int itemSize: 30 + FishUI.Units.largeSpacing * 2
-                    property color hicolor: FishUI.Theme.highlightColor
 
                     Component.onCompleted: {
                         model.clear()

@@ -3,5 +3,8 @@
         <file>appearance.qml</file>
         <file>wallpaper.qml</file>
         <file>DesktopPreview.qml</file>
+        <file>images/automode.png</file>
+        <file>images/lightmode.png</file>
+        <file>images/darkmode.png</file>
     </qresource>
 </RCC>

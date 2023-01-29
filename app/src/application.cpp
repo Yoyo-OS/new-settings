@@ -37,7 +37,8 @@ Application::Application(int &argc, char **argv)
 
     // Translations
     QLocale locale;
-    QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/yoyo-settings/translations/").arg("yoyo-settings_" + QLocale(locale).name());
+    QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/yoyo-settings/translations").arg("yoyo-settings_" + QLocale(locale).name());
+    qDebug()<<qmFilePath;
     if (QFile::exists(qmFilePath)) {
         QTranslator *translator = new QTranslator(QGuiApplication::instance());
         if (translator->load(qmFilePath)) {

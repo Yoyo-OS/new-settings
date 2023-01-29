@@ -5,396 +5,400 @@
     <name>AppearancePlugin</name>
     <message>
         <source>Appearance</source>
-        <translation></translation>
+        <translation>外观</translation>
     </message>
     <message>
         <source>Wallpaper</source>
-        <translation></translation>
+        <translation>壁纸</translation>
     </message>
 </context>
 <context>
     <name>ConnectDialog</name>
     <message>
         <source>Enter Password</source>
-        <translation></translation>
+        <translation>输入密码</translation>
     </message>
     <message>
         <source>Enter the password for %1</source>
-        <translation></translation>
+        <translation>输入 %1 密码</translation>
     </message>
     <message>
         <source>Password</source>
-        <translation></translation>
+        <translation>密码</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation></translation>
+        <translation>取消</translation>
     </message>
     <message>
         <source>Connect</source>
-        <translation></translation>
+        <translation>连接</translation>
     </message>
 </context>
 <context>
     <name>Main</name>
     <message>
         <source>WLAN</source>
-        <translation></translation>
+        <translation>无线网络</translation>
     </message>
     <message>
         <source>Add other...</source>
-        <translation></translation>
+        <translation>添加其它……</translation>
     </message>
     <message>
         <source>Ethernet</source>
-        <translation></translation>
+        <translation>有线网络</translation>
     </message>
     <message>
         <source>Bluetooth</source>
-        <translation></translation>
+        <translation>蓝牙</translation>
     </message>
     <message>
         <source>Pairing unsuccessful</source>
-        <translation></translation>
+        <translation>配对不成功</translation>
     </message>
     <message>
         <source>Connecting Unsuccessful</source>
-        <translation></translation>
+        <translation>连接不成功</translation>
     </message>
     <message>
         <source>My devices</source>
-        <translation></translation>
+        <translation>我的设备</translation>
     </message>
     <message>
         <source>Other devices</source>
-        <translation></translation>
+        <translation>其它设备</translation>
     </message>
     <message>
         <source>Connected</source>
-        <translation></translation>
+        <translation>已连接</translation>
     </message>
     <message>
         <source>Not Connected</source>
-        <translation></translation>
+        <translation>未连接</translation>
     </message>
     <message>
         <source>Connect</source>
-        <translation></translation>
+        <translation>连接</translation>
     </message>
     <message>
         <source>Disconnect</source>
-        <translation></translation>
+        <translation>断开连接</translation>
     </message>
     <message>
         <source>Forget This Device</source>
-        <translation></translation>
+        <translation>忽略此设备</translation>
     </message>
     <message>
         <source>Proxy</source>
-        <translation></translation>
+        <translation>代理</translation>
     </message>
     <message>
         <source>No Proxy</source>
-        <translation></translation>
+        <translation>不使用代理</translation>
     </message>
     <message>
         <source>Use proxy auto configuration URL</source>
-        <translation></translation>
+        <translation>使用代理自动配置 URL</translation>
     </message>
     <message>
         <source>Use manually specified proxy configuration</source>
-        <translation></translation>
+        <translation>使用手动配置的代理服务器</translation>
     </message>
     <message>
         <source>Select file</source>
-        <translation></translation>
+        <translation>选择文件</translation>
     </message>
     <message>
         <source>HTTP Proxy</source>
-        <translation></translation>
+        <translation>HTTP 代理</translation>
     </message>
     <message>
         <source>Port</source>
-        <translation></translation>
+        <translation>端口</translation>
     </message>
     <message>
         <source>Also use this proxy for FTP</source>
-        <translation></translation>
+        <translation>将此代理用于 FTP</translation>
     </message>
     <message>
         <source>FTP Proxy</source>
-        <translation></translation>
+        <translation>FTP 代理</translation>
     </message>
     <message>
         <source>SOCKS Proxy</source>
-        <translation></translation>
+        <translation>SOCKS 代理</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation></translation>
+        <translation>保存</translation>
     </message>
 </context>
 <context>
     <name>NetworkPlugin</name>
     <message>
         <source>WLAN</source>
-        <translation></translation>
+        <translation>无线网络</translation>
     </message>
     <message>
         <source>Ethernet</source>
-        <translation></translation>
+        <translation>有线网络</translation>
     </message>
     <message>
         <source>Bluetooth</source>
-        <translation></translation>
+        <translation>蓝牙</translation>
     </message>
     <message>
         <source>Proxy</source>
-        <translation></translation>
+        <translation>代理</translation>
     </message>
 </context>
 <context>
     <name>NewNetworkDialog</name>
     <message>
         <source>Name</source>
-        <translation></translation>
+        <translation>名称</translation>
     </message>
     <message>
         <source>Network Name</source>
-        <translation></translation>
+        <translation>网络名称</translation>
     </message>
     <message>
         <source>Security</source>
-        <translation></translation>
+        <translation>安全性</translation>
     </message>
     <message>
         <source>None</source>
-        <translation></translation>
+        <translation>无</translation>
     </message>
     <message>
         <source>UserName</source>
-        <translation></translation>
+        <translation>用户名</translation>
     </message>
     <message>
         <source>Password</source>
-        <translation></translation>
+        <translation>密码</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation></translation>
+        <translation>取消</translation>
     </message>
     <message>
         <source>Join</source>
-        <translation></translation>
+        <translation>添加</translation>
     </message>
 </context>
 <context>
     <name>PairDialog</name>
     <message>
         <source>Bluetooth Pairing Request</source>
-        <translation></translation>
+        <translation>蓝牙配对请求</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation></translation>
+        <translation>取消</translation>
     </message>
     <message>
         <source>OK</source>
-        <translation></translation>
+        <translation>确认</translation>
     </message>
 </context>
 <context>
     <name>QObject</name>
     <message>
         <source>Vendor default</source>
-        <translation></translation>
+        <translation>默认</translation>
     </message>
     <message>
         <source>Medium</source>
-        <translation></translation>
+        <translation>适中</translation>
     </message>
     <message>
         <source>None</source>
-        <translation></translation>
+        <translation>无</translation>
     </message>
     <message>
         <source>Slight</source>
-        <translation></translation>
+        <translation>轻微</translation>
     </message>
     <message>
         <source>Full</source>
-        <translation></translation>
+        <translation>完全</translation>
     </message>
 </context>
 <context>
     <name>SideBar</name>
     <message>
         <source>Network and connection</source>
-        <translation></translation>
+        <translation>网络与连接</translation>
     </message>
     <message>
         <source>Display and appearance</source>
-        <translation></translation>
+        <translation>显示与外观</translation>
     </message>
     <message>
         <source>System</source>
-        <translation></translation>
+        <translation>系统</translation>
     </message>
     <message>
         <source>Test</source>
-        <translation></translation>
+        <translation>测试</translation>
     </message>
 </context>
 <context>
     <name>WifiItem</name>
     <message>
         <source>Password</source>
-        <translation></translation>
+        <translation>密码</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation></translation>
+        <translation>取消</translation>
     </message>
     <message>
         <source>Connect</source>
-        <translation></translation>
+        <translation>连接</translation>
     </message>
     <message>
         <source>Disconnect</source>
-        <translation></translation>
+        <translation>断开连接</translation>
     </message>
 </context>
 <context>
     <name>WifiView</name>
     <message>
         <source>WLAN</source>
-        <translation></translation>
+        <translation>无线网络</translation>
     </message>
 </context>
 <context>
     <name>WirelessDetailsDialog</name>
     <message>
         <source>Auto-Join</source>
-        <translation></translation>
+        <translation>自动加入网络</translation>
     </message>
     <message>
         <source>Security</source>
-        <translation></translation>
+        <translation>安全性</translation>
     </message>
     <message>
         <source>Signal</source>
-        <translation></translation>
+        <translation>信号</translation>
     </message>
     <message>
         <source>IPv4 Address</source>
-        <translation></translation>
+        <translation>IPv4地址</translation>
     </message>
     <message>
         <source>IPv6 Address</source>
-        <translation></translation>
+        <translation>IPv6地址</translation>
     </message>
     <message>
         <source>MAC Address</source>
-        <translation></translation>
+        <translation>MAC地址</translation>
     </message>
     <message>
         <source>Gateway</source>
-        <translation></translation>
+        <translation>路由器</translation>
     </message>
     <message>
         <source>DNS</source>
-        <translation></translation>
+        <translation>DNS</translation>
     </message>
     <message>
         <source>Close</source>
-        <translation></translation>
+        <translation>关闭</translation>
     </message>
     <message>
         <source>Forget this network</source>
-        <translation></translation>
+        <translation>忘记这个网络</translation>
     </message>
 </context>
 <context>
     <name>appearance</name>
     <message>
         <source>Appearance</source>
-        <translation></translation>
+        <translation>外观</translation>
     </message>
     <message>
         <source>Theme</source>
-        <translation></translation>
+        <translation>主题</translation>
     </message>
     <message>
         <source>Light</source>
-        <translation></translation>
+        <translation>浅色模式</translation>
     </message>
     <message>
         <source>Dark</source>
-        <translation></translation>
+        <translation>深色模式</translation>
     </message>
     <message>
         <source>Dim the wallpaper in dark theme</source>
-        <translation></translation>
+        <translation>在深色模式下调暗壁纸</translation>
     </message>
     <message>
         <source>System effects</source>
-        <translation></translation>
+        <translation>系统特效</translation>
     </message>
     <message>
         <source>Minimize animation</source>
-        <translation></translation>
+        <translation>最小化动画</translation>
     </message>
     <message>
         <source>Default</source>
-        <translation></translation>
+        <translation>默认</translation>
     </message>
     <message>
         <source>Magic Lamp</source>
-        <translation></translation>
+        <translation>神灯</translation>
     </message>
     <message>
         <source>Accent color</source>
-        <translation></translation>
+        <translation>强调色</translation>
     </message>
     <message>
         <source>Fonts</source>
-        <translation></translation>
+        <translation>字体</translation>
     </message>
     <message>
         <source>General Font</source>
-        <translation></translation>
+        <translation>常规字体</translation>
     </message>
     <message>
         <source>Fixed Font</source>
-        <translation></translation>
+        <translation>固定字体</translation>
     </message>
     <message>
         <source>Font Size</source>
-        <translation></translation>
+        <translation>字体大小</translation>
     </message>
     <message>
         <source>Small</source>
-        <translation></translation>
+        <translation>小</translation>
     </message>
     <message>
         <source>Medium</source>
-        <translation></translation>
+        <translation>中</translation>
     </message>
     <message>
         <source>Large</source>
-        <translation></translation>
+        <translation>大</translation>
     </message>
     <message>
         <source>Huge</source>
-        <translation></translation>
+        <translation>巨大</translation>
     </message>
     <message>
         <source>Hinting</source>
-        <translation></translation>
+        <translation>微调</translation>
     </message>
     <message>
         <source>Anti-Aliasing</source>
-        <translation></translation>
+        <translation>抗锯齿</translation>
+    </message>
+    <message>
+        <source>Auto</source>
+        <translation>自动切换</translation>
     </message>
 </context>
 <context>
@@ -405,30 +409,30 @@
     </message>
     <message>
         <source>Settings</source>
-        <translation></translation>
+        <translation>设置</translation>
     </message>
     <message>
         <source>Appearance</source>
-        <translation></translation>
+        <translation>外观</translation>
     </message>
 </context>
 <context>
     <name>wallpaper</name>
     <message>
         <source>Background</source>
-        <translation></translation>
+        <translation>背景</translation>
     </message>
     <message>
         <source>Background type</source>
-        <translation></translation>
+        <translation>背景类型</translation>
     </message>
     <message>
         <source>Picture</source>
-        <translation></translation>
+        <translation>图片</translation>
     </message>
     <message>
         <source>Color</source>
-        <translation></translation>
+        <translation>纯色</translation>
     </message>
 </context>
 </TS>
