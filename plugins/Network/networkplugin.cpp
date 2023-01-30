@@ -10,17 +10,10 @@ NetworkPlugin::NetworkPlugin(QObject *parent)
 QList<QObject*> NetworkPlugin::dataList()
 {
     QList<QObject*> dataList;
-    DataObject *data1 = new DataObject(this);
-    data1->setName("wlan");
-    data1->setTitle(tr("WLAN"));
-    data1->setPage("qrc:/network/wlan/Main.qml");
-    data1->setIconId("\uf8ad");
-    data1->setCategory(NETWORKANDCONNECTION);
-    dataList.append(data1);
     DataObject *data2 = new DataObject(this);
-    data2->setName("ethernet");
-    data2->setTitle(tr("Ethernet"));
-    data2->setPage("qrc:/network/wired/Main.qml");
+    data2->setName("network");
+    data2->setTitle(tr("Network"));
+    data2->setPage("qrc:/network/network/Main.qml");
     data2->setIconId("\uf45e");
     data2->setCategory(NETWORKANDCONNECTION);
     dataList.append(data2);

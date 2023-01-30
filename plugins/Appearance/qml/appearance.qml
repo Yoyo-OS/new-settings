@@ -222,13 +222,15 @@ ItemPage {
                                 color: currentColor
                                 radius: width / 2
 
-                                Image {
+                                Label{
+                                    font.family: "FluentSystemIcons-Regular"
                                     anchors.centerIn: parent
-                                    width: parent.height * 0.6
-                                    height: width
-                                    sourceSize: Qt.size(width, height)
-                                    source: "qrc:/images/dark/checked.svg"
+                                    color: FishUI.Theme.textColor
+                                    font.pixelSize: parent.height * 0.6
+                                    antialiasing: false
+                                    smooth: false
                                     visible: checked
+                                    text: "\uf293"
                                 }
                             }
                         }

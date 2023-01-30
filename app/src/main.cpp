@@ -10,5 +10,5 @@ int main(int argc, char *argv[])
 
     app.setWindowIcon(QIcon::fromTheme("yoyo-settings"));
 
-    return app.exec();
+    return 0;
 }

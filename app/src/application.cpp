@@ -26,6 +26,16 @@ Application::Application(int &argc, char **argv)
     parser.process(*this);
     const QString module = parser.value(moduleOption);
 
+    if (!QDBusConnection::sessionBus().registerService("com.yoyo.SettingsUI")) {
+        QDBusInterface iface("com.yoyo.SettingsUI", "/SettingsUI", "com.yoyo.SettingsUI", QDBusConnection::sessionBus());
+        if (iface.isValid())
+            iface.call("switchToPage", module);
+        return;
+    }
+
+    new SettingsUIAdaptor(this);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/SettingsUI"), this);
+
     // Translations
     QLocale locale;
     QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/yoyo-settings/translations").arg("yoyo-settings_" + QLocale(locale).name());
@@ -53,15 +63,11 @@ Application::Application(int &argc, char **argv)
     }, Qt::QueuedConnection);
     m_engine.load(url);
 
-    if (!QDBusConnection::sessionBus().registerService("com.yoyo.SettingsUI")) {
-        QDBusInterface iface("com.yoyo.SettingsUI", "/SettingsUI", "com.yoyo.SettingsUI", QDBusConnection::sessionBus());
-        if (iface.isValid())
-            iface.call("switchToPage", module);
-        return;
+    if (!module.isEmpty()) {
+        switchToPage(module);
     }
 
-    new SettingsUIAdaptor(this);
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/SettingsUI"), this);
+    QGuiApplication::exec();
 }
 
 void Application::insertPlugin()

@@ -52,14 +52,6 @@
 <context>
     <name>Main</name>
     <message>
-        <source>WLAN</source>
-        <translation>无线网络</translation>
-    </message>
-    <message>
-        <source>Add other...</source>
-        <translation>添加其它……</translation>
-    </message>
-    <message>
         <source>Ethernet</source>
         <translation>有线网络</translation>
     </message>
@@ -471,17 +463,13 @@
         <source>Add user</source>
         <translation>添加用户</translation>
     </message>
+    <message>
+        <source>Add other...</source>
+        <translation type="unfinished">添加其它……</translation>
+    </message>
 </context>
 <context>
     <name>NetworkPlugin</name>
-    <message>
-        <source>WLAN</source>
-        <translation>无线网络</translation>
-    </message>
-    <message>
-        <source>Ethernet</source>
-        <translation>有线网络</translation>
-    </message>
     <message>
         <source>Bluetooth</source>
         <translation>蓝牙</translation>
@@ -489,6 +477,10 @@
     <message>
         <source>Proxy</source>
         <translation>代理</translation>
+    </message>
+    <message>
+        <source>Network</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

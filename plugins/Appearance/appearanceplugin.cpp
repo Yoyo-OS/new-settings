@@ -21,7 +21,7 @@ QList<QObject*> AppearancePlugin::dataList()
     data1->setCategory(DISPLAYANDAPPEARANCE);
     dataList.append(data1);
     DataObject *data2 = new DataObject(this);
-    data2->setName("wallpaper");
+    data2->setName("background");
     data2->setTitle(tr("Wallpaper"));
     data2->setIconId("\uf867");
     data2->setPage("qrc:/appearance/wallpaper.qml");
