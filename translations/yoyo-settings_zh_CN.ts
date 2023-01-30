@@ -133,6 +133,38 @@
         <source>Save</source>
         <translation>保存</translation>
     </message>
+    <message>
+        <source>Display</source>
+        <translation>显示</translation>
+    </message>
+    <message>
+        <source>Brightness</source>
+        <translation>亮度</translation>
+    </message>
+    <message>
+        <source>Screen</source>
+        <translation>屏幕</translation>
+    </message>
+    <message>
+        <source>Screen Name</source>
+        <translation>屏幕名称</translation>
+    </message>
+    <message>
+        <source>Refresh rate</source>
+        <translation>刷新率</translation>
+    </message>
+    <message>
+        <source>Enabled</source>
+        <translation>启用</translation>
+    </message>
+    <message>
+        <source>Scale</source>
+        <translation>缩放率</translation>
+    </message>
+    <message>
+        <source>Resolution</source>
+        <translation>分辨率</translation>
+    </message>
 </context>
 <context>
     <name>NetworkPlugin</name>

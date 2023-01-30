@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/display">
+        <file>Main.qml</file>
+        <file>RotationButton.qml</file>
+    </qresource>
+</RCC>

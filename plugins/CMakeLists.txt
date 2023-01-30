@@ -1,4 +1,4 @@
 add_subdirectory(Appearance)
 add_subdirectory(Network)
-add_subdirectory(demoA)
+add_subdirectory(Display)
 add_subdirectory(demoB)

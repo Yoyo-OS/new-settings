@@ -2,8 +2,8 @@
     "author" : "yzzi",
     "date" : "2023/01/28",
     "api" : "0.0.1",
-    "name" : "DemoA",
+    "name" : "DemoB",
     "version" : "1.0.0",
-    "des" : "这是一个插件A",
+    "des" : "这是一个插件B",
     "dependencies" : []
 }
