@@ -74,7 +74,7 @@ ItemPage {
                     spacing: FishUI.Units.largeSpacing * 2
 
                     IconCheckBox {
-                        source: "qrc:/images/powersave.svg"
+                        source: FishUI.Theme.darkMode ? "qrc:/System/images/dark/powersave.svg" : "qrc:/System/images/light/powersave.svg"
                         text: qsTr("Power Save")
                         checked: power.mode === 0
                         onClicked: power.mode = 0
@@ -87,7 +87,7 @@ ItemPage {
 //                    }
 
                     IconCheckBox {
-                        source: "qrc:/images/performance.svg"
+                        source: FishUI.Theme.darkMode ? "qrc:/System/images/dark/performance.svg" : "qrc:/System/images/light/performance.svg"
                         text: qsTr("Performance")
                         checked: power.mode === 1
                         onClicked: power.mode = 1

@@ -19,5 +19,9 @@
         <file>images/sensors-voltage-symbolic.svg</file>
         <file>images/dark/world.svg</file>
         <file>images/light/world.svg</file>
+        <file>images/light/performance.svg</file>
+        <file>images/light/powersave.svg</file>
+        <file>images/dark/performance.svg</file>
+        <file>images/dark/powersave.svg</file>
     </qresource>
 </RCC>

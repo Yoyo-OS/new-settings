@@ -465,7 +465,7 @@
     </message>
     <message>
         <source>Add other...</source>
-        <translation type="unfinished">添加其它……</translation>
+        <translation>添加其它……</translation>
     </message>
 </context>
 <context>
@@ -480,7 +480,7 @@
     </message>
     <message>
         <source>Network</source>
-        <translation type="unfinished"></translation>
+        <translation>网络</translation>
     </message>
 </context>
 <context>
