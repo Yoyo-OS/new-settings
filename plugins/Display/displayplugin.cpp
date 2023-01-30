@@ -12,6 +12,7 @@ QList<QObject*> DisplayPlugin::dataList()
     DataObject *data1 = new DataObject(this);
     data1->setName("display");
     data1->setTitle(tr("Display"));
+    data1->setIconId("\uf35a");
     data1->setPage("qrc:/display/Main.qml");
     data1->setCategory(DISPLAYANDAPPEARANCE);
     dataList.append(data1);

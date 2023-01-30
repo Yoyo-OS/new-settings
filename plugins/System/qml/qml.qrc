@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/System">
+        <file>Accessibility/Main.qml</file>
+        <file>Battery/BatteryItem.qml</file>
+        <file>Battery/HistoryGraph.qml</file>
+        <file>Battery/Main.qml</file>
+        <file>Cursor/Main.qml</file>
+        <file>DateTime/Main.qml</file>
+        <file>DateTime/TimeZoneDialog.qml</file>
+        <file>DefaultApp/AppComboBox.qml</file>
+        <file>DefaultApp/Main.qml</file>
+        <file>Notification/Main.qml</file>
+        <file>Power/Main.qml</file>
+        <file>Sound/Main.qml</file>
+        <file>Touchpad/Main.qml</file>
+        <file>User/Main.qml</file>
+        <file>User/UserDelegateItem.qml</file>
+        <file>LanguagePage.qml</file>
+        <file>images/sensors-voltage-symbolic.svg</file>
+        <file>images/dark/world.svg</file>
+        <file>images/light/world.svg</file>
+    </qresource>
+</RCC>

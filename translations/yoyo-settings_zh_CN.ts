@@ -39,7 +39,14 @@
     <name>DisplayPlugin</name>
     <message>
         <source>Display</source>
-        <translation type="unfinished">显示</translation>
+        <translation>显示</translation>
+    </message>
+</context>
+<context>
+    <name>LanguagePage</name>
+    <message>
+        <source>Language</source>
+        <translation>语言</translation>
     </message>
 </context>
 <context>
@@ -172,6 +179,298 @@
         <source>Resolution</source>
         <translation>分辨率</translation>
     </message>
+    <message>
+        <source>Accessibility</source>
+        <translation>辅助功能</translation>
+    </message>
+    <message>
+        <source>Appearance enhancement</source>
+        <translation>外观增强</translation>
+    </message>
+    <message>
+        <source>Deform windows while they are moving</source>
+        <translation>移动时使窗户变形</translation>
+    </message>
+    <message>
+        <source>Display window thumbnails on the edge of the screen</source>
+        <translation>在屏幕边缘显示窗口缩略图</translation>
+    </message>
+    <message>
+        <source>Visualize touch points</source>
+        <translation>高亮显示在触控屏幕上的触摸点</translation>
+    </message>
+    <message>
+        <source>Barrier free function</source>
+        <translation>无障碍</translation>
+    </message>
+    <message>
+        <source>Snap Helper</source>
+        <translation>窗口居中辅助线</translation>
+    </message>
+    <message>
+        <source>Dim Inactive</source>
+        <translation>非活动窗口变暗</translation>
+    </message>
+    <message>
+        <source>Battery</source>
+        <translation>电池</translation>
+    </message>
+    <message>
+        <source>Last hour</source>
+        <translation>最近1小时</translation>
+    </message>
+    <message>
+        <source>Last 2 hours</source>
+        <translation>最近2小时</translation>
+    </message>
+    <message>
+        <source>Last 12 hours</source>
+        <translation>最近12小时</translation>
+    </message>
+    <message>
+        <source>Last 24 hours</source>
+        <translation>最近24小时</translation>
+    </message>
+    <message>
+        <source>Last 48 hours</source>
+        <translation>最近48小时</translation>
+    </message>
+    <message>
+        <source>Last 7 days</source>
+        <translation>最近7天</translation>
+    </message>
+    <message>
+        <source>History</source>
+        <translation>历史</translation>
+    </message>
+    <message>
+        <source>W</source>
+        <translation>瓦特</translation>
+    </message>
+    <message>
+        <source>Health</source>
+        <translation>健康</translation>
+    </message>
+    <message>
+        <source>Poor</source>
+        <translation>较差</translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation>正常</translation>
+    </message>
+    <message>
+        <source>Excellent</source>
+        <translation>极佳</translation>
+    </message>
+    <message>
+        <source>Last Charged to</source>
+        <translation>上一次充电至</translation>
+    </message>
+    <message>
+        <source>Maximum Capacity</source>
+        <translation>最大容量</translation>
+    </message>
+    <message>
+        <source>Show percentage in status bar</source>
+        <translation>在状态栏中显示电池百分比</translation>
+    </message>
+    <message>
+        <source>No battery found</source>
+        <translation>找不到电池</translation>
+    </message>
+    <message>
+        <source>Mouse</source>
+        <translation>鼠标</translation>
+    </message>
+    <message>
+        <source>Left hand</source>
+        <translation>左手模式</translation>
+    </message>
+    <message>
+        <source>Natural scrolling</source>
+        <translation>自然滚动</translation>
+    </message>
+    <message>
+        <source>Pointer speed</source>
+        <translation>指针速度</translation>
+    </message>
+    <message>
+        <source>Theme</source>
+        <translation>主题</translation>
+    </message>
+    <message>
+        <source>Date &amp; Time</source>
+        <translation>日期和时间</translation>
+    </message>
+    <message>
+        <source>Auto Sync</source>
+        <translation>自动同步</translation>
+    </message>
+    <message>
+        <source>24-Hour Time</source>
+        <translation>24小时制</translation>
+    </message>
+    <message>
+        <source>Time Zone</source>
+        <translation>时区</translation>
+    </message>
+    <message>
+        <source>Default Applications</source>
+        <translation>默认应用</translation>
+    </message>
+    <message>
+        <source>Web Browser</source>
+        <translation>浏览器</translation>
+    </message>
+    <message>
+        <source>File Manager</source>
+        <translation>文件管理器</translation>
+    </message>
+    <message>
+        <source>Email Client</source>
+        <translation>电子邮箱</translation>
+    </message>
+    <message>
+        <source>Terminal</source>
+        <translation>终端</translation>
+    </message>
+    <message>
+        <source>Notifications</source>
+        <translation>通知</translation>
+    </message>
+    <message>
+        <source>Do Not Disturb</source>
+        <translation>勿扰模式</translation>
+    </message>
+    <message>
+        <source>Power</source>
+        <translation>电源</translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation>模式</translation>
+    </message>
+    <message>
+        <source>Power Save</source>
+        <translation>省电模式</translation>
+    </message>
+    <message>
+        <source>Performance</source>
+        <translation>性能模式</translation>
+    </message>
+    <message>
+        <source>Performance mode: CPU and GPU frequencies will be increased, while power consumption and heat generation will be increased.</source>
+        <translation>性能模式: CPU和GPU频率将提升，同时耗电和发热将增加。</translation>
+    </message>
+    <message>
+        <source>Turn off screen</source>
+        <translation>关闭屏幕</translation>
+    </message>
+    <message>
+        <source>2 Minutes</source>
+        <translation>2分钟</translation>
+    </message>
+    <message>
+        <source>5 Minutes</source>
+        <translation>5分钟</translation>
+    </message>
+    <message>
+        <source>10 Minutes</source>
+        <translation>10分钟</translation>
+    </message>
+    <message>
+        <source>15 Minutes</source>
+        <translation>15分钟</translation>
+    </message>
+    <message>
+        <source>30 Minutes</source>
+        <translation>30分钟</translation>
+    </message>
+    <message>
+        <source>Never</source>
+        <translation>永不</translation>
+    </message>
+    <message>
+        <source>Hibernate after screen is turned off</source>
+        <translation>关闭屏幕后休眠</translation>
+    </message>
+    <message>
+        <source>Lock screen after screen is turned off</source>
+        <translation>关闭屏幕后锁屏</translation>
+    </message>
+    <message>
+        <source>Sound</source>
+        <translation>声音</translation>
+    </message>
+    <message>
+        <source>Output Devices</source>
+        <translation>输出设备</translation>
+    </message>
+    <message>
+        <source>Input Devices</source>
+        <translation>输入设备</translation>
+    </message>
+    <message>
+        <source>Touchpad</source>
+        <translation>触控板</translation>
+    </message>
+    <message>
+        <source>Enable</source>
+        <translation>启用</translation>
+    </message>
+    <message>
+        <source>Tap to click</source>
+        <translation>轻触点击</translation>
+    </message>
+    <message>
+        <source>Pointer acceleration</source>
+        <translation>指针速度</translation>
+    </message>
+    <message>
+        <source>User</source>
+        <translation>用户</translation>
+    </message>
+    <message>
+        <source>Add new user</source>
+        <translation>添加新用户</translation>
+    </message>
+    <message>
+        <source>User name</source>
+        <translation>用户名</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation>密码</translation>
+    </message>
+    <message>
+        <source>Verify password</source>
+        <translation>验证密码</translation>
+    </message>
+    <message>
+        <source>Account type</source>
+        <translation>类型</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>标准</translation>
+    </message>
+    <message>
+        <source>Administrator</source>
+        <translation>管理员</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+    <message>
+        <source>Add</source>
+        <translation>添加</translation>
+    </message>
+    <message>
+        <source>Add user</source>
+        <translation>添加用户</translation>
+    </message>
 </context>
 <context>
     <name>NetworkPlugin</name>
@@ -282,6 +581,107 @@
     <message>
         <source>Test</source>
         <translation>测试</translation>
+    </message>
+</context>
+<context>
+    <name>SystemPlugin</name>
+    <message>
+        <source>User</source>
+        <translation>用户</translation>
+    </message>
+    <message>
+        <source>Notifications</source>
+        <translation>通知</translation>
+    </message>
+    <message>
+        <source>Sound</source>
+        <translation>声音</translation>
+    </message>
+    <message>
+        <source>Mouse</source>
+        <translation>鼠标</translation>
+    </message>
+    <message>
+        <source>Touchpad</source>
+        <translation>触控板</translation>
+    </message>
+    <message>
+        <source>Date &amp; Time</source>
+        <translation>日期和时间</translation>
+    </message>
+    <message>
+        <source>Accessibility</source>
+        <translation>辅助功能</translation>
+    </message>
+    <message>
+        <source>Default Applications</source>
+        <translation>默认应用</translation>
+    </message>
+    <message>
+        <source>Language</source>
+        <translation>语言</translation>
+    </message>
+    <message>
+        <source>Battery</source>
+        <translation>电池</translation>
+    </message>
+    <message>
+        <source>Power</source>
+        <translation>电源</translation>
+    </message>
+</context>
+<context>
+    <name>TimeZoneDialog</name>
+    <message>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+    <message>
+        <source>Set</source>
+        <translation>设置</translation>
+    </message>
+</context>
+<context>
+    <name>UserDelegateItem</name>
+    <message>
+        <source>Currently logged</source>
+        <translation>当前登录</translation>
+    </message>
+    <message>
+        <source>Account type</source>
+        <translation>类型</translation>
+    </message>
+    <message>
+        <source>Standard</source>
+        <translation>标准</translation>
+    </message>
+    <message>
+        <source>Administrator</source>
+        <translation>管理员</translation>
+    </message>
+    <message>
+        <source>Automatic login</source>
+        <translation>自动登录</translation>
+    </message>
+    <message>
+        <source>Change password</source>
+        <translation>更改密码</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation>密码</translation>
+    </message>
+    <message>
+        <source>Verify password</source>
+        <translation>验证密码</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation>取消</translation>
+    </message>
+    <message>
+        <source>Delete this user</source>
+        <translation>删除该用户</translation>
     </message>
 </context>
 <context>
