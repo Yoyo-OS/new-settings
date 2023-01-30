@@ -225,7 +225,7 @@ ItemPage {
                                 Label{
                                     font.family: "FluentSystemIcons-Regular"
                                     anchors.centerIn: parent
-                                    color: FishUI.Theme.textColor
+                                    color: "#FFFFFF"
                                     font.pixelSize: parent.height * 0.6
                                     antialiasing: false
                                     smooth: false
