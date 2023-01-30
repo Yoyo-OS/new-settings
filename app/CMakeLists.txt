@@ -39,6 +39,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(yoyo-settings
         MANUAL_FINALIZATION
         ${INTERFACES_FILES}
+        ${DBUS_SOURCES}
         ${PROJECT_SOURCES}
     )
 # Define target properties for Android with Qt 6 as:
@@ -56,6 +57,7 @@ else()
     else()
         add_executable(yoyo-settings
           ${INTERFACES_FILES}
+          ${DBUS_SOURCES}
           ${PROJECT_SOURCES}
         )
     endif()

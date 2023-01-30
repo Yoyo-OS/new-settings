@@ -76,9 +76,9 @@ FishUI.Window {
     }
 
     function switchPageFromName(pageName) {
-        for (var i = 0; i < sideBar.model.count; ++i) {
-            if (pageName === sideBar.model.get(i).name) {
-                switchPageFromIndex(i)
+        for (var i = 0; i < dataObjectModel.length; ++i) {
+            if (pageName === dataObjectModel[i].name) {
+                switchPageFromIndex(3)
                 sideBar.view.currentIndex = i
             }
         }

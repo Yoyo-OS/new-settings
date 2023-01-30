@@ -9,6 +9,7 @@
  * Copyright (c) 2022 by YoyoOS, All Rights Reserved.
  */
 #include "application.h"
+#include "settingsuiadaptor.h"
 #include <QFontDatabase>
 Application::Application(int &argc, char **argv)
     : QGuiApplication(argc, argv)
@@ -23,17 +24,7 @@ Application::Application(int &argc, char **argv)
     QCommandLineOption moduleOption("m", "Switch to module", "module");
     parser.addOption(moduleOption);
     parser.process(*this);
-
     const QString module = parser.value(moduleOption);
-
-    if (!QDBusConnection::sessionBus().registerService("com.yoyo.SettingsUI")) {
-        QDBusInterface iface("com.yoyo.SettingsUI", "/SettingsUI", "com.yoyo.SettingsUI", QDBusConnection::sessionBus());
-        if (iface.isValid())
-            iface.call("switchToPage", module);
-        return;
-    }
-
-    QDBusConnection::sessionBus().registerObject(QStringLiteral("/SettingsUI"), this);
 
     // Translations
     QLocale locale;
@@ -61,6 +52,16 @@ Application::Application(int &argc, char **argv)
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     m_engine.load(url);
+
+    if (!QDBusConnection::sessionBus().registerService("com.yoyo.SettingsUI")) {
+        QDBusInterface iface("com.yoyo.SettingsUI", "/SettingsUI", "com.yoyo.SettingsUI", QDBusConnection::sessionBus());
+        if (iface.isValid())
+            iface.call("switchToPage", module);
+        return;
+    }
+
+    new SettingsUIAdaptor(this);
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/SettingsUI"), this);
 }
 
 void Application::insertPlugin()
