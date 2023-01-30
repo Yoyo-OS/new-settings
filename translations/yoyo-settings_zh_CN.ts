@@ -36,6 +36,13 @@
     </message>
 </context>
 <context>
+    <name>DisplayPlugin</name>
+    <message>
+        <source>Display</source>
+        <translation type="unfinished">显示</translation>
+    </message>
+</context>
+<context>
     <name>Main</name>
     <message>
         <source>WLAN</source>
