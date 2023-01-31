@@ -68,7 +68,7 @@ void DefaultApplications::loadApps()
                    && item.mimeType.contains("x-scheme-handler/http")) {
             m_browserList.append(item);
         } else if (item.categories.contains("Email")
-                   && item.mimeType.contains("x-scheme-handler/mailto")) {
+                   || item.mimeType.contains("x-scheme-handler/mailto")) {
             m_emailList.append(item);
         } else if (item.categories.contains("TerminalEmulator")) {
             m_terminalList.append(item);
