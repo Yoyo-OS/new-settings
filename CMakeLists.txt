@@ -42,10 +42,23 @@ set(INCLUDE_INSTALL_DIR include)
 install(DIRECTORY ${HEADERS} DESTINATION ${INCLUDE_INSTALL_DIR})
 
 include(CMakePackageConfigHelpers)
-configure_package_config_file(YoyoSettingsConfig.cmake.in
-    ${CMAKE_CURRENT_BINARY_DIR}/YoyoSettingsConfig.cmake
-    INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/YoyoSettings
-    PATH_VARS INCLUDE_INSTALL_DIR)
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/YoyoSettingsConfig.cmake
-        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/YoyoSettings)
+configure_package_config_file(
+        "${CMAKE_CURRENT_SOURCE_DIR}/YoyoSettingsConfig.cmake.in"
+        "${CMAKE_CURRENT_BINARY_DIR}/YoyoSettingsConfig.cmake"
+        INSTALL_DESTINATION
+        "${CMAKECONFIG_INSTALL_DIR}"
+        PATH_VARS
+        CMAKECONFIG_INSTALL_DIR CMAKE_INSTALL_PREFIX
+)
+
+if(NOT APPLE)
+install(
+        FILES
+        "${CMAKE_CURRENT_BINARY_DIR}/YoyoSettingsConfig.cmake"
+        DESTINATION
+        "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT
+        Devel
+)
+endif()
