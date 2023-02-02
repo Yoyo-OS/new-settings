@@ -835,16 +835,19 @@
 <context>
     <name>main</name>
     <message>
-        <source>I&apos; DemoA</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <source>Appearance</source>
-        <translation>外观</translation>
+        <source>main1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>main2</name>
+    <message>
+        <source>main2</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

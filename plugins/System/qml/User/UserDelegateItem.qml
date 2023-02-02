@@ -25,14 +25,14 @@ import QtGraphicalEffects 1.0
 
 import Yoyo.Settings 1.0
 import Yoyo.Accounts 1.0
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 
 import "../../"
 
 RoundedItem {
     id: control
 
-    height: mainLayout.implicitHeight + FishUI.Units.largeSpacing * 2
+    height: mainLayout.implicitHeight + Youi.Units.largeSpacing * 2
 
     UserAccount {
         id: currentUser
@@ -62,7 +62,7 @@ RoundedItem {
                 id: _topItem
 
                 Layout.fillWidth: true
-                height: _topLayout.implicitHeight + FishUI.Units.largeSpacing
+                height: _topLayout.implicitHeight + Youi.Units.largeSpacing
 
                 MouseArea {
                     anchors.fill: parent
@@ -72,8 +72,8 @@ RoundedItem {
                 RowLayout {
                     id: _topLayout
                     anchors.fill: parent
-                    anchors.topMargin: FishUI.Units.smallSpacing
-                    anchors.bottomMargin: FishUI.Units.smallSpacing
+                    anchors.topMargin: Youi.Units.smallSpacing
+                    anchors.bottomMargin: Youi.Units.smallSpacing
                     spacing: 0
 
                     Image {
@@ -112,17 +112,17 @@ RoundedItem {
                         Layout.alignment: Qt.AlignVCenter
                         font.pixelSize: 15
                         text: "<b>%1</b>".arg(userName)
-                        leftPadding: FishUI.Units.largeSpacing
+                        leftPadding: Youi.Units.largeSpacing
                     }
 
                     Item {
-                        width: FishUI.Units.largeSpacing
+                        width: Youi.Units.largeSpacing
                     }
 
                     Label {
                         Layout.alignment: Qt.AlignVCenter
                         text: realName
-                        color: FishUI.Theme.disabledTextColor
+                        color: Youi.Theme.disabledTextColor
                         visible: realName !== userName
                     }
 
@@ -137,7 +137,7 @@ RoundedItem {
                     }
 
                     Item {
-                        width: FishUI.Units.smallSpacing
+                        width: Youi.Units.smallSpacing
                     }
 
                     Button{
@@ -155,16 +155,16 @@ RoundedItem {
 
         Hideable {
             id: additionalSettings
-            spacing: FishUI.Units.largeSpacing
+            spacing: Youi.Units.largeSpacing
 
             Item {
-                height: FishUI.Units.largeSpacing
+                height: Youi.Units.largeSpacing
             }
 
             GridLayout {
                 Layout.fillWidth: true
-                Layout.bottomMargin: FishUI.Units.smallSpacing
-                rowSpacing: FishUI.Units.largeSpacing * 2
+                Layout.bottomMargin: Youi.Units.smallSpacing
+                rowSpacing: Youi.Units.largeSpacing * 2
                 columns: 2
 
                 Label {
@@ -210,8 +210,8 @@ RoundedItem {
                 id: changePasswdLayout
                 visible: false
                 columns: 2
-                columnSpacing: FishUI.Units.largeSpacing * 2
-                rowSpacing: FishUI.Units.smallSpacing * 2
+                columnSpacing: Youi.Units.largeSpacing * 2
+                rowSpacing: Youi.Units.smallSpacing * 2
 
                 Label {
                     text: qsTr("Password")
@@ -242,7 +242,7 @@ RoundedItem {
 
             RowLayout {
                 id: changePasswdFooterLayout
-                spacing: FishUI.Units.largeSpacing
+                spacing: Youi.Units.largeSpacing
                 visible: false
 
                 Button {
@@ -273,7 +273,7 @@ RoundedItem {
             StandardButton {
                 text: qsTr("Change password")
                 onClicked: showChangePasswordItem()
-                backgroundColor: FishUI.Theme.darkMode ? "#363636" : FishUI.Theme.backgroundColor
+                backgroundColor: Youi.Theme.darkMode ? "#363636" : Youi.Theme.backgroundColor
                 Layout.fillWidth: true
                 visible: !changePasswdLabel.visible
             }
@@ -282,7 +282,7 @@ RoundedItem {
                 text: qsTr("Delete this user")
                 enabled: model.userId !== loggedUser.userId
                 onClicked: accountsManager.deleteUser(userId, true)
-                backgroundColor: FishUI.Theme.darkMode ? "#363636" : FishUI.Theme.backgroundColor
+                backgroundColor: Youi.Theme.darkMode ? "#363636" : Youi.Theme.backgroundColor
                 Layout.fillWidth: true
             }
         }

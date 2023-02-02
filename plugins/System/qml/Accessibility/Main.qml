@@ -3,7 +3,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.0
 
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.Settings 1.0
 import Yoyo.Accounts 1.0
 import "../../"
@@ -22,12 +22,12 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: FishUI.Units.largeSpacing * 2
+            spacing: Youi.Units.largeSpacing * 2
 
             RoundedItem {
                 Label {
                     text: qsTr("Appearance enhancement")
-                    color: FishUI.Theme.disabledTextColor
+                    color: Youi.Theme.disabledTextColor
                     //visible: _view.count > 0
                 }
 
@@ -83,7 +83,7 @@ ItemPage {
             RoundedItem {
                 Label {
                     text: qsTr("Barrier free function")
-                    color: FishUI.Theme.disabledTextColor
+                    color: Youi.Theme.disabledTextColor
                     //visible: _view.count > 0
                 }
 
@@ -121,7 +121,7 @@ ItemPage {
             }
 
             Item {
-                height: FishUI.Units.smallSpacing
+                height: Youi.Units.smallSpacing
             }
         }
     }

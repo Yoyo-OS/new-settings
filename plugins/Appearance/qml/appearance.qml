@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 
 import Yoyo.Settings 1.0
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import "../"
 
 ItemPage {
@@ -51,24 +51,24 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            // anchors.bottomMargin: FishUI.Units.largeSpacing
-            spacing: FishUI.Units.largeSpacing * 2
+            // anchors.bottomMargin: Youi.Units.largeSpacing
+            spacing: Youi.Units.largeSpacing * 2
 
             RoundedItem {
                 Label {
                     text: qsTr("Theme")
-                    color: FishUI.Theme.disabledTextColor
+                    color: Youi.Theme.disabledTextColor
                 }
 
                 // Light Mode and Dark Mode
                 RowLayout {
-                    spacing: FishUI.Units.largeSpacing * 2
+                    spacing: Youi.Units.largeSpacing * 2
 
                     IconCheckBox {
                         iconSize: 140
                         source: "qrc:/appearance/images/lightmode.png"
                         text: qsTr("Light")
-                        checked: !FishUI.Theme.darkMode
+                        checked: !Youi.Theme.darkMode
                         onClicked: appearance.switchDarkMode(false)
                     }
 
@@ -76,7 +76,7 @@ ItemPage {
                         iconSize: 140
                         source: "qrc:/appearance/images/darkmode.png"
                         text: qsTr("Dark")
-                        checked: FishUI.Theme.darkMode
+                        checked: Youi.Theme.darkMode
                         onClicked: appearance.switchDarkMode(true)
                     }
 
@@ -84,7 +84,7 @@ ItemPage {
                         iconSize: 140
                         source: "qrc:/appearance/images/automode.png"
                         text: qsTr("Auto")
-                        //checked: FishUI.Theme.darkMode
+                        //checked: Youi.Theme.darkMode
                         //onClicked: appearance.switchDarkMode(true)
                     }
                 }
@@ -92,12 +92,12 @@ ItemPage {
                 HorizontalDivider {}
 
                 RowLayout {
-                    spacing: FishUI.Units.largeSpacing
+                    spacing: Youi.Units.largeSpacing
 
                     Label {
                         id: dimsTipsLabel
                         text: qsTr("Dim the wallpaper in dark theme")
-                        bottomPadding: FishUI.Units.smallSpacing
+                        bottomPadding: Youi.Units.smallSpacing
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
                     }
 
@@ -136,7 +136,7 @@ ItemPage {
 
             RoundedItem {
                 RowLayout {
-                    spacing: FishUI.Units.largeSpacing * 2
+                    spacing: Youi.Units.largeSpacing * 2
 
                     Label {
                         text: qsTr("Minimize animation")
@@ -161,7 +161,7 @@ ItemPage {
             RoundedItem {
                 Label {
                     text: qsTr("Accent color")
-                    color: FishUI.Theme.disabledTextColor
+                    color: Youi.Theme.disabledTextColor
                 }
 
                 GridView {
@@ -173,23 +173,23 @@ ItemPage {
                     interactive: false
                     model: ListModel {}
 
-                    property int itemSize: 30 + FishUI.Units.largeSpacing * 2
+                    property int itemSize: 30 + Youi.Units.largeSpacing * 2
 
                     Component.onCompleted: {
                         model.clear()
-                        model.append({"accentColor": String(FishUI.Theme.blueColor)})
-                        model.append({"accentColor": String(FishUI.Theme.redColor)})
-                        model.append({"accentColor": String(FishUI.Theme.greenColor)})
-                        model.append({"accentColor": String(FishUI.Theme.purpleColor)})
-                        model.append({"accentColor": String(FishUI.Theme.pinkColor)})
-                        model.append({"accentColor": String(FishUI.Theme.orangeColor)})
-                        model.append({"accentColor": String(FishUI.Theme.greyColor)})
+                        model.append({"accentColor": String(Youi.Theme.color0)})
+                        model.append({"accentColor": String(Youi.Theme.color1)})
+                        model.append({"accentColor": String(Youi.Theme.color2)})
+                        model.append({"accentColor": String(Youi.Theme.color3)})
+                        model.append({"accentColor": String(Youi.Theme.color4)})
+                        model.append({"accentColor": String(Youi.Theme.color5)})
+                        model.append({"accentColor": String(Youi.Theme.color6)})
                     }
 
                     delegate: Item {
                         id: _accentColorItem
 
-                        property bool checked: Qt.colorEqual(FishUI.Theme.highlightColor, accentColor)
+                        property bool checked: Qt.colorEqual(Youi.Theme.highlightColor, accentColor)
                         property color currentColor: accentColor
 
                         width: GridView.view.itemSize
@@ -204,7 +204,7 @@ ItemPage {
 
                         Rectangle {
                             anchors.fill: parent
-                            anchors.margins: FishUI.Units.smallSpacing
+                            anchors.margins: Youi.Units.smallSpacing
                             color: "transparent"
                             radius: width / 2
 
@@ -218,7 +218,7 @@ ItemPage {
 
                             Rectangle {
                                 anchors.fill: parent
-                                anchors.margins: FishUI.Units.smallSpacing
+                                anchors.margins: Youi.Units.smallSpacing
                                 color: currentColor
                                 radius: width / 2
 
@@ -240,18 +240,18 @@ ItemPage {
             RoundedItem {
                 Label {
                     text: qsTr("Fonts")
-                    color: FishUI.Theme.disabledTextColor
+                    color: Youi.Theme.disabledTextColor
                 }
                 GridLayout {
                     rows: 3
                     columns: 2
 
-                    columnSpacing: FishUI.Units.largeSpacing * 1.5
-                    rowSpacing: FishUI.Units.largeSpacing * 1.5
+                    columnSpacing: Youi.Units.largeSpacing * 1.5
+                    rowSpacing: Youi.Units.largeSpacing * 1.5
 
                     Label {
                         text: qsTr("General Font")
-                        bottomPadding: FishUI.Units.smallSpacing
+                        bottomPadding: Youi.Units.smallSpacing
                     }
 
                     ComboBox {
@@ -261,14 +261,14 @@ ItemPage {
                         Layout.fillWidth: true
                         topInset: 0
                         bottomInset: 0
-                        leftPadding: FishUI.Units.largeSpacing
-                        rightPadding: FishUI.Units.largeSpacing
+                        leftPadding: Youi.Units.largeSpacing
+                        rightPadding: Youi.Units.largeSpacing
                         onActivated: appearance.setGenericFontFamily(currentText)
                     }
 
                     Label {
                         text: qsTr("Fixed Font")
-                        bottomPadding: FishUI.Units.smallSpacing
+                        bottomPadding: Youi.Units.smallSpacing
                     }
 
                     ComboBox {
@@ -278,14 +278,14 @@ ItemPage {
                         Layout.fillWidth: true
                         topInset: 0
                         bottomInset: 0
-                        leftPadding: FishUI.Units.largeSpacing
-                        rightPadding: FishUI.Units.largeSpacing
+                        leftPadding: Youi.Units.largeSpacing
+                        rightPadding: Youi.Units.largeSpacing
                         onActivated: appearance.setFixedFontFamily(currentText)
                     }
 
                     Label {
                         text: qsTr("Font Size")
-                        bottomPadding: FishUI.Units.smallSpacing
+                        bottomPadding: Youi.Units.smallSpacing
                     }
 
                     TabBar {
@@ -346,7 +346,7 @@ ItemPage {
 
                     Label {
                         text: qsTr("Hinting")
-                        bottomPadding: FishUI.Units.smallSpacing
+                        bottomPadding: Youi.Units.smallSpacing
                     }
 
                     ComboBox {
@@ -359,7 +359,7 @@ ItemPage {
 
                     Label {
                         text: qsTr("Anti-Aliasing")
-                        bottomPadding: FishUI.Units.smallSpacing
+                        bottomPadding: Youi.Units.smallSpacing
                     }
 
                     Switch {

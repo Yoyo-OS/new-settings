@@ -5,10 +5,8 @@ import QtGraphicalEffects 1.0
 import Youi 1.0 as Youi
 import Yoyo.Settings 1.0
 import "../"
-
-
 ItemPage {
-    headerTitle: qsTr("main1")
+    headerTitle: qsTr("main2")
     Scrollable {
         anchors.fill: parent
         contentHeight: layout.implicitHeight
@@ -18,10 +16,7 @@ ItemPage {
             anchors.fill: parent
             spacing: Youi.Units.largeSpacing * 2
             Button{
-                text: "yyds"
-                onClicked: {
-                    rootWindow.switchPageFromUrl("qrc:/demo2/main2.qml")
-                }
+                text: "OHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
             }
         }
     }

@@ -23,14 +23,14 @@ import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 import QtQuick.Window 2.3
 
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.NetworkManagement 1.0 as NM
 import "../../"
 
 Item {
     id: control
 
-    height: _itemLayout.implicitHeight + FishUI.Units.largeSpacing
+    height: _itemLayout.implicitHeight + Youi.Units.largeSpacing
 
     property bool passwordIsStatic: (model.securityType === NM.Enums.StaticWep || model.securityType === NM.Enums.WpaPsk ||
                                      model.securityType === NM.Enums.Wpa2Psk || model.securityType === NM.Enums.SAE)
@@ -41,19 +41,19 @@ Item {
         anchors.fill: parent
         anchors.leftMargin: 0
         anchors.rightMargin: 0
-        anchors.topMargin: FishUI.Units.smallSpacing
-        anchors.bottomMargin: FishUI.Units.smallSpacing
+        anchors.topMargin: Youi.Units.smallSpacing
+        anchors.bottomMargin: Youi.Units.smallSpacing
         spacing: 0
 
         // 顶部项
         Item {
             Layout.fillWidth: true
-            Layout.preferredHeight: _topItem.implicitHeight + FishUI.Units.largeSpacing
+            Layout.preferredHeight: _topItem.implicitHeight + Youi.Units.largeSpacing
 
             Rectangle {
                 anchors.fill: parent
-                radius: FishUI.Theme.smallRadius
-                color: FishUI.Theme.textColor
+                radius: Youi.Theme.smallRadius
+                color: Youi.Theme.textColor
                 opacity: mouseArea.pressed ? 0.15 :  mouseArea.containsMouse ? 0.1 : 0.0
             }
 
@@ -108,15 +108,15 @@ Item {
             RowLayout {
                 id: _topItem
                 anchors.fill: parent
-                anchors.leftMargin: FishUI.Units.smallSpacing
-                anchors.rightMargin: FishUI.Units.smallSpacing
-                spacing: FishUI.Units.largeSpacing
+                anchors.leftMargin: Youi.Units.smallSpacing
+                anchors.rightMargin: Youi.Units.smallSpacing
+                spacing: Youi.Units.largeSpacing
 
                 Image {
                     width: 22
                     height: width
                     sourceSize: Qt.size(width, height)
-                    source: "qrc:/images/" + (FishUI.Theme.darkMode ? "dark/" : "light/") + model.connectionIcon + ".svg"
+                    source: "qrc:/images/" + (Youi.Theme.darkMode ? "dark/" : "light/") + model.connectionIcon + ".svg"
                     smooth: false
                 }
 
@@ -128,7 +128,7 @@ Item {
                     Layout.fillWidth: true
                 }
 
-                FishUI.BusyIndicator {
+                Youi.BusyIndicator {
                     id: busyIndicator
                     width: 22
                     height: width
@@ -140,7 +140,7 @@ Item {
                 // Activated
                 Label{
                     font.family: "FluentSystemIcons-Regular"
-                    color: FishUI.Theme.highlightColor
+                    color: Youi.Theme.highlightColor
                     font.pixelSize: 20
                     antialiasing: false
                     smooth: false
@@ -151,7 +151,7 @@ Item {
                 // Locked
                 Label{
                     font.family: "FluentSystemIcons-Regular"
-                    color: FishUI.Theme.textColor
+                    color: Youi.Theme.textColor
                     font.pixelSize: 22
                     antialiasing: false
                     smooth: false
@@ -187,13 +187,13 @@ Item {
             }
 
             Item {
-                height: FishUI.Units.largeSpacing * 2
+                height: Youi.Units.largeSpacing * 2
             }
 
             // 密码对话
             RowLayout {
                 visible: predictableWirelessPassword
-                spacing: FishUI.Units.largeSpacing
+                spacing: Youi.Units.largeSpacing
 
                 Label {
                     text: qsTr("Password")
@@ -258,7 +258,7 @@ Item {
             }
 
             Item {
-                height: FishUI.Units.smallSpacing
+                height: Youi.Units.smallSpacing
             }
 
             HorizontalDivider {}

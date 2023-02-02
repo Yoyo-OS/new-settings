@@ -21,7 +21,7 @@ import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 
 Item {
     implicitWidth: 230
@@ -35,8 +35,8 @@ Item {
     property var category: [qsTr("Network and connection"),qsTr("Display and appearance"),qsTr("System"),qsTr("Test")]
     Rectangle {
         anchors.fill: parent
-        color: FishUI.Theme.darkMode ? Qt.lighter(FishUI.Theme.backgroundColor, 1.5)
-                                     : Qt.darker(FishUI.Theme.backgroundColor, 1.05)
+        color: Youi.Theme.darkMode ? Qt.lighter(Youi.Theme.backgroundColor, 1.5)
+                                     : Qt.darker(Youi.Theme.backgroundColor, 1.05)
         opacity: rootWindow.compositing ? 0.7 : 1.0
 
         Behavior on color {
@@ -52,16 +52,7 @@ Item {
         anchors.margins: 0
         spacing: 0
 
-        Label {
-            text: rootWindow.title
-            color: rootWindow.active ? FishUI.Theme.textColor : FishUI.Theme.disabledTextColor
-            Layout.preferredHeight: rootWindow.header.height
-            leftPadding: FishUI.Units.largeSpacing + FishUI.Units.smallSpacing
-            rightPadding: FishUI.Units.largeSpacing + FishUI.Units.smallSpacing
-            topPadding: FishUI.Units.smallSpacing
-            bottomPadding: 0
-            font.pointSize: 13
-        }
+        anchors.topMargin: rootWindow.header.height
 
         ListView {
             id: listView
@@ -70,11 +61,11 @@ Item {
             clip: true
             model: dataObjectModel
 
-            spacing: FishUI.Units.smallSpacing
-            leftMargin: FishUI.Units.largeSpacing
-            rightMargin: FishUI.Units.largeSpacing
+            spacing: Youi.Units.smallSpacing
+            leftMargin: Youi.Units.largeSpacing
+            rightMargin: Youi.Units.largeSpacing
             topMargin: 0
-            bottomMargin: FishUI.Units.largeSpacing
+            bottomMargin: Youi.Units.largeSpacing
 
             ScrollBar.vertical: ScrollBar {}
 
@@ -82,32 +73,32 @@ Item {
             highlightMoveDuration: 0
             highlightResizeDuration : 0
             highlight: Rectangle {
-                radius: FishUI.Theme.mediumRadius
-                color: Qt.rgba(FishUI.Theme.textColor.r,
-                               FishUI.Theme.textColor.g,
-                               FishUI.Theme.textColor.b, 0.05)
+                radius: Youi.Theme.smallRadius
+                color: Qt.rgba(Youi.Theme.textColor.r,
+                               Youi.Theme.textColor.g,
+                               Youi.Theme.textColor.b, 0.05)
                 smooth: true
             }
 
             section.property: "category"
             section.delegate: Item {
                 width: ListView.view.width - ListView.view.leftMargin - ListView.view.rightMargin
-                height: FishUI.Units.fontMetrics.height + FishUI.Units.largeSpacing + FishUI.Units.smallSpacing
+                height: Youi.Units.fontMetrics.height + Youi.Units.largeSpacing + Youi.Units.smallSpacing
 
                 Text {
                     anchors.left: parent.left
                     anchors.top: parent.top
-                    anchors.leftMargin: Qt.application.layoutDirection === Qt.RightToLeft ? 0 : FishUI.Units.smallSpacing
-                    anchors.rightMargin: FishUI.Units.smallSpacing
-                    anchors.topMargin: FishUI.Units.largeSpacing
-                    anchors.bottomMargin: FishUI.Units.smallSpacing
-                    color: FishUI.Theme.disabledTextColor
+                    anchors.leftMargin: Qt.application.layoutDirection === Qt.RightToLeft ? 0 : Youi.Units.smallSpacing
+                    anchors.rightMargin: Youi.Units.smallSpacing
+                    anchors.topMargin: Youi.Units.largeSpacing
+                    anchors.bottomMargin: Youi.Units.smallSpacing
+                    color: Youi.Theme.disabledTextColor
                     font.pointSize: 8
                     text: category[section]
                 }
             }
 
-            FishUI.WheelHandler {
+            Youi.WheelHandler {
                 target: listView
             }
 
@@ -129,13 +120,13 @@ Item {
                         onClicked: listView.currentIndex = index
                     }
 
-                    radius: FishUI.Theme.mediumRadius
-                    color: mouseArea.pressed ? Qt.rgba(FishUI.Theme.textColor.r,
-                                                       FishUI.Theme.textColor.g,
-                                                       FishUI.Theme.textColor.b, FishUI.Theme.darkMode ? 0.05 : 0.1) :
-                           mouseArea.containsMouse || isCurrent ? Qt.rgba(FishUI.Theme.textColor.r,
-                                                                          FishUI.Theme.textColor.g,
-                                                                          FishUI.Theme.textColor.b, FishUI.Theme.darkMode ? 0.1 : 0.05) :
+                    radius: Youi.Theme.smallRadius
+                    color: mouseArea.pressed ? Qt.rgba(Youi.Theme.textColor.r,
+                                                       Youi.Theme.textColor.g,
+                                                       Youi.Theme.textColor.b, Youi.Theme.darkMode ? 0.05 : 0.1) :
+                           mouseArea.containsMouse || isCurrent ? Qt.rgba(Youi.Theme.textColor.r,
+                                                                          Youi.Theme.textColor.g,
+                                                                          Youi.Theme.textColor.b, Youi.Theme.darkMode ? 0.1 : 0.05) :
                                                                   "transparent"
 
                     smooth: true
@@ -143,8 +134,8 @@ Item {
 
                 RowLayout {
                     anchors.fill: parent
-                    anchors.leftMargin: FishUI.Units.smallSpacing
-                    spacing: FishUI.Units.smallSpacing
+                    anchors.leftMargin: Youi.Units.smallSpacing
+                    spacing: Youi.Units.smallSpacing
 
                     Rectangle {
                         id: iconRect
@@ -153,7 +144,7 @@ Item {
                         Layout.alignment: Qt.AlignVCenter
                         radius: width /2
                         //color: model.iconColor
-                        color: FishUI.Theme.highlightColor
+                        color: Youi.Theme.highlightColor
 
                         Label{
                             id: icon
@@ -171,7 +162,7 @@ Item {
                     Label {
                         id: itemTitle
                         text: model.title
-                        color: FishUI.Theme.darkMode ? FishUI.Theme.textColor : "#363636"
+                        color: Youi.Theme.darkMode ? Youi.Theme.textColor : "#363636"
                         font.pointSize: 8
                     }
 

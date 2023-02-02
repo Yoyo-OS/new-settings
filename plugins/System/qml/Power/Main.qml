@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 
 import Yoyo.Settings 1.0
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import "../../"
 
 ItemPage {
@@ -62,19 +62,19 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: FishUI.Units.largeSpacing
+            spacing: Youi.Units.largeSpacing
 
             RoundedItem {
                 Label {
                     text: qsTr("Mode")
-                    color: FishUI.Theme.disabledTextColor
+                    color: Youi.Theme.disabledTextColor
                 }
 
                 RowLayout {
-                    spacing: FishUI.Units.largeSpacing * 2
+                    spacing: Youi.Units.largeSpacing * 2
 
                     IconCheckBox {
-                        source: FishUI.Theme.darkMode ? "qrc:/System/images/dark/powersave.svg" : "qrc:/System/images/light/powersave.svg"
+                        source: Youi.Theme.darkMode ? "qrc:/System/images/dark/powersave.svg" : "qrc:/System/images/light/powersave.svg"
                         text: qsTr("Power Save")
                         checked: power.mode === 0
                         onClicked: power.mode = 0
@@ -87,7 +87,7 @@ ItemPage {
 //                    }
 
                     IconCheckBox {
-                        source: FishUI.Theme.darkMode ? "qrc:/System/images/dark/performance.svg" : "qrc:/System/images/light/performance.svg"
+                        source: Youi.Theme.darkMode ? "qrc:/System/images/dark/performance.svg" : "qrc:/System/images/light/performance.svg"
                         text: qsTr("Performance")
                         checked: power.mode === 1
                         onClicked: power.mode = 1
@@ -96,21 +96,21 @@ ItemPage {
             }
 
             Label {
-                color: FishUI.Theme.disabledTextColor
-                leftPadding: FishUI.Units.largeSpacing * 2
-                rightPadding: FishUI.Units.largeSpacing
+                color: Youi.Theme.disabledTextColor
+                leftPadding: Youi.Units.largeSpacing * 2
+                rightPadding: Youi.Units.largeSpacing
                 Layout.fillWidth: true
                 wrapMode: Text.WordWrap
                 text: qsTr("Performance mode: CPU and GPU frequencies will be increased, while power consumption and heat generation will be increased.")
             }
 
             RoundedItem {
-                Layout.topMargin: FishUI.Units.largeSpacing
+                Layout.topMargin: Youi.Units.largeSpacing
 
                 GridLayout {
                     columns: 2
-                    rowSpacing: FishUI.Units.largeSpacing * 2
-                    Layout.bottomMargin: FishUI.Units.largeSpacing
+                    rowSpacing: Youi.Units.largeSpacing * 2
+                    Layout.bottomMargin: Youi.Units.largeSpacing
 
                     Label {
                         text: qsTr("Turn off screen")
@@ -184,7 +184,7 @@ ItemPage {
             }
 
             Item {
-                height: FishUI.Units.largeSpacing * 2
+                height: Youi.Units.largeSpacing * 2
             }
         }
     }

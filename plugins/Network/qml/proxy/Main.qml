@@ -23,7 +23,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtQuick.Dialogs 1.2
 
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.Settings 1.0
 import "../../"
 
@@ -57,11 +57,11 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: FishUI.Units.largeSpacing * 2
+            spacing: Youi.Units.largeSpacing * 2
 
             RoundedItem {
                 id: mainItem
-                spacing: FishUI.Units.largeSpacing
+                spacing: Youi.Units.largeSpacing
 
                 RadioButton {
                     id: noProxyRadioButton
@@ -102,7 +102,7 @@ ItemPage {
 
                 RowLayout {
                     id: autoScriptProxyLayout
-                    spacing: FishUI.Units.largeSpacing
+                    spacing: Youi.Units.largeSpacing
                     visible: autoScriptProxyRadioButton.checked
 
                     TextField {
@@ -127,8 +127,8 @@ ItemPage {
                 GridLayout {
                     visible: manualProxyRadioButton.checked
                     columns: 4
-                    columnSpacing: FishUI.Units.largeSpacing
-                    rowSpacing: FishUI.Units.largeSpacing
+                    columnSpacing: Youi.Units.largeSpacing
+                    rowSpacing: Youi.Units.largeSpacing
 
                     Label {
                         text: qsTr("HTTP Proxy")
@@ -282,7 +282,7 @@ ItemPage {
             }
 
             Item {
-                height: FishUI.Units.smallSpacing
+                height: Youi.Units.smallSpacing
             }
         }
     }

@@ -21,12 +21,12 @@ import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.12
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 
 Item {
     id: control
 
-    property var iconSpacing: FishUI.Units.smallSpacing * 0.8
+    property var iconSpacing: Youi.Units.smallSpacing * 0.8
     property alias source: icon.source
     property alias text: label.text
     property bool checked: false
@@ -50,15 +50,15 @@ Item {
             height: control.iconSize
             color: "transparent"
             border.width: 3
-            border.color: control.checked ? FishUI.Theme.highlightColor : "transparent"
+            border.color: control.checked ? Youi.Theme.highlightColor : "transparent"
 
-            radius: FishUI.Theme.bigRadius + control.iconSpacing
+            radius: Youi.Theme.smallRadius
             visible: true
 
             Image {
                 id: icon
                 anchors.fill: parent
-                anchors.margins: FishUI.Units.smallSpacing
+                anchors.margins: Youi.Units.smallSpacing
                 sourceSize: Qt.size(icon.width, icon.height)
                 opacity: 1
                 smooth: false
@@ -71,7 +71,7 @@ Item {
 
                         Rectangle {
                             anchors.fill: parent
-                            radius: FishUI.Theme.bigRadius
+                            radius: Youi.Theme.smallRadius
                         }
                     }
                 }
@@ -99,7 +99,7 @@ Item {
 
         Label {
             id: label
-            color: control.checked ? FishUI.Theme.highlightColor : FishUI.Theme.textColor
+            color: control.checked ? Youi.Theme.highlightColor : Youi.Theme.textColor
             visible: label.text
             Layout.alignment: Qt.AlignHCenter
         }

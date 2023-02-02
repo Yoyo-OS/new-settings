@@ -20,7 +20,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 
 Page {
     id: page
@@ -34,15 +34,18 @@ Page {
     header: Item {
         height: rootWindow.header.height
 
-        Label {
-            anchors.left: parent.left
-            leftPadding: FishUI.Units.largeSpacing * 3
-            rightPadding: Qt.application.layoutDirection === Qt.RightToLeft ? FishUI.Units.largeSpacing * 3 : 0
-            topPadding: FishUI.Units.largeSpacing
-            bottomPadding: 0
-            font.pointSize: 12
-            text: page.headerTitle
-            color: rootWindow.active ? FishUI.Theme.textColor : FishUI.Theme.disabledTextColor
+        RowLayout{
+            anchors.fill: parent
+            anchors.topMargin: Youi.Units.smallSpacing * 1.5
+            anchors.leftMargin: Youi.Units.largeSpacing * 3
+            anchors.rightMargin: Qt.application.layoutDirection === Qt.RightToLeft ? Youi.Units.largeSpacing * 3 : 0
+
+            Label {
+                Layout.fillWidth: true
+                font.pointSize: 12
+                text: page.headerTitle
+                color: rootWindow.active ? Youi.Theme.textColor : Youi.Theme.disabledTextColor
+            }
         }
     }
 }

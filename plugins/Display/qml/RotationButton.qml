@@ -18,7 +18,7 @@
  */
 
 import QtQuick 2.12
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.Screen 1.0 as CS
 import "../"
 

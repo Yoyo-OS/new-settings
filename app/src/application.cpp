@@ -11,6 +11,7 @@
 #include "application.h"
 #include "settingsuiadaptor.h"
 #include <QFontDatabase>
+#include <QQuickStyle>
 Application::Application(int &argc, char **argv)
     : QGuiApplication(argc, argv)
 {
@@ -36,10 +37,11 @@ Application::Application(int &argc, char **argv)
     new SettingsUIAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/SettingsUI"), this);
 
+    QQuickStyle::setStyle(QLatin1String("yoyo-style"));
+
     // Translations
     QLocale locale;
     QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/yoyo-settings/translations").arg("yoyo-settings_" + QLocale(locale).name());
-    qDebug()<<qmFilePath;
     if (QFile::exists(qmFilePath)) {
         QTranslator *translator = new QTranslator(QGuiApplication::instance());
         if (translator->load(qmFilePath)) {
@@ -97,7 +99,6 @@ void Application::insertPlugin()
                 for(it1.toFront(); it1.hasNext();)
                 {
                     DataObject* m_obj = dynamic_cast<DataObject*>(it1.next());
-                    qDebug()<<m_obj->category();
                     switch (m_obj->category()) {
                         case 0:
                             dataList0.append(m_obj);

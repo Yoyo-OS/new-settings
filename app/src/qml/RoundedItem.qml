@@ -19,7 +19,7 @@
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.12
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 
 Rectangle {
     Layout.fillWidth: true
@@ -28,10 +28,19 @@ Rectangle {
     property alias spacing: _mainLayout.spacing
     property alias layout: _mainLayout
 
-    color: FishUI.Theme.secondBackgroundColor
-    radius: FishUI.Theme.mediumRadius
+    color: Youi.Theme.alternateBackgroundColor
+    border.width: 1
+    border.color: Youi.Theme.borderColor
+    radius: Youi.Theme.smallRadius
 
     Behavior on color {
+        ColorAnimation {
+            duration: 200
+            easing.type: Easing.Linear
+        }
+    }
+
+    Behavior on border.color {
         ColorAnimation {
             duration: 200
             easing.type: Easing.Linear
@@ -45,10 +54,10 @@ Rectangle {
     ColumnLayout {
         id: _mainLayout
         anchors.fill: parent
-        anchors.leftMargin: FishUI.Units.largeSpacing * 1.5
-        anchors.rightMargin: FishUI.Units.largeSpacing * 1.5
-        anchors.topMargin: FishUI.Units.largeSpacing
-        anchors.bottomMargin: FishUI.Units.largeSpacing
-        spacing: FishUI.Units.largeSpacing
+        anchors.leftMargin: Youi.Units.largeSpacing * 1.5
+        anchors.rightMargin: Youi.Units.largeSpacing * 1.5
+        anchors.topMargin: Youi.Units.largeSpacing
+        anchors.bottomMargin: Youi.Units.largeSpacing
+        spacing: Youi.Units.largeSpacing
     }
 }

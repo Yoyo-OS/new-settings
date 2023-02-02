@@ -22,12 +22,12 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import "../../"
 
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.NetworkManagement 1.0 as NM
 
 ColumnLayout {
     id: _contentLayout
-    spacing: FishUI.Units.largeSpacing
+    spacing: Youi.Units.largeSpacing
 
     ConnectDialog {
         id: connectDialog
@@ -44,12 +44,12 @@ ColumnLayout {
     }
 
     RowLayout {
-        spacing: FishUI.Units.smallSpacing * 1.5
+        spacing: Youi.Units.smallSpacing * 1.5
 
         Label {
             id: wlanLabel
             text: qsTr("WLAN")
-            color: FishUI.Theme.disabledTextColor
+            color: Youi.Theme.disabledTextColor
         }
 
         Item {

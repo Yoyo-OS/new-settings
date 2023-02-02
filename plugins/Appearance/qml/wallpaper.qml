@@ -22,7 +22,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.0
 import Yoyo.Settings 1.0
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 
 import "../"
 
@@ -40,15 +40,15 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: FishUI.Units.largeSpacing
+            spacing: Youi.Units.largeSpacing
 
             RoundedItem {
                 RowLayout {
-                    spacing: FishUI.Units.largeSpacing * 2
+                    spacing: Youi.Units.largeSpacing * 2
 
                     Label {
                         text: qsTr("Background type")
-                        leftPadding: FishUI.Units.smallSpacing
+                        leftPadding: Youi.Units.smallSpacing
                     }
 
                     TabBar {
@@ -78,7 +78,7 @@ ItemPage {
                     property int rowCount: _view.width / itemWidth
 
                     Layout.fillWidth: true
-                    implicitHeight: Math.ceil(_view.count / rowCount) * cellHeight + FishUI.Units.largeSpacing
+                    implicitHeight: Math.ceil(_view.count / rowCount) * cellHeight + Youi.Units.largeSpacing
 
                     visible: background.backgroundType === 0
 
@@ -112,25 +112,25 @@ ItemPage {
                         // Preload background
                         Rectangle {
                             anchors.fill: parent
-                            anchors.margins: FishUI.Units.largeSpacing
-                            radius: FishUI.Theme.bigRadius + FishUI.Units.smallSpacing / 2
-                            color: FishUI.Theme.backgroundColor
+                            anchors.margins: Youi.Units.largeSpacing
+                            radius: Youi.Theme.smallRadius
+                            color: Youi.Theme.backgroundColor
                             visible: _image.status !== Image.Ready
                         }
 
                         Rectangle {
                             anchors.fill: parent
-                            anchors.margins: FishUI.Units.smallSpacing
+                            anchors.margins: Youi.Units.smallSpacing
                             color: "transparent"
-                            radius: FishUI.Theme.bigRadius + FishUI.Units.smallSpacing / 2
+                            radius: Youi.Theme.smallRadius
 
-                            border.color: FishUI.Theme.highlightColor
+                            border.color: Youi.Theme.highlightColor
                             border.width: _image.status == Image.Ready & isSelected ? 3 : 0
 
                             Image {
                                 id: _image
                                 anchors.fill: parent
-                                anchors.margins: FishUI.Units.smallSpacing
+                                anchors.margins: Youi.Units.smallSpacing
                                 source: "file://" + modelData
                                 sourceSize: Qt.size(width, height)
                                 fillMode: Image.PreserveAspectCrop
@@ -155,7 +155,7 @@ ItemPage {
 
                                         Rectangle {
                                             anchors.fill: parent
-                                            radius: FishUI.Theme.bigRadius
+                                            radius: Youi.Theme.smallRadius
                                         }
                                     }
                                 }
@@ -196,7 +196,7 @@ ItemPage {
 
                 Item {
                     visible: background.backgroundType === 1
-                    height: FishUI.Units.smallSpacing
+                    height: Youi.Units.smallSpacing
                 }
 
                 Loader {
@@ -214,7 +214,7 @@ ItemPage {
 //            }
 
             Item {
-                height: FishUI.Units.largeSpacing
+                height: Youi.Units.largeSpacing
             }
         }
     }
@@ -228,7 +228,7 @@ ItemPage {
 
             property int rowCount: _colorView.width / cellWidth
 
-            implicitHeight: Math.ceil(_colorView.count / _colorView.rowCount) * cellHeight + FishUI.Units.largeSpacing
+            implicitHeight: Math.ceil(_colorView.count / _colorView.rowCount) * cellHeight + Youi.Units.largeSpacing
 
             cellWidth: 50
             cellHeight: 50
@@ -253,7 +253,7 @@ ItemPage {
                 property bool checked: Qt.colorEqual(background.backgroundColor, bgColor)
                 property color currentColor: bgColor
 
-                width: _colorView.itemSize + FishUI.Units.largeSpacing
+                width: _colorView.itemSize + Youi.Units.largeSpacing
                 height: width
                 color: "transparent"
                 radius: width / 2

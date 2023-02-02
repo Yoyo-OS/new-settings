@@ -20,7 +20,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.Settings 1.0
 import Yoyo.Audio 1.0
 import "../../"
@@ -82,9 +82,9 @@ ItemPage {
 
             Label {
                 text: qsTr("Output Devices")
-                leftPadding: FishUI.Units.largeSpacing
-                bottomPadding: FishUI.Units.smallSpacing
-                color: FishUI.Theme.disabledTextColor
+                leftPadding: Youi.Units.largeSpacing
+                bottomPadding: Youi.Units.smallSpacing
+                color: Youi.Theme.disabledTextColor
                 visible: sinks.count >= 1
             }
 
@@ -93,7 +93,7 @@ ItemPage {
                 id: sinks
                 Layout.fillWidth: true
                 interactive: false
-                spacing: FishUI.Units.largeSpacing
+                spacing: Youi.Units.largeSpacing
 
                 Layout.preferredHeight: {
                     var totalHeight = 0
@@ -107,32 +107,40 @@ ItemPage {
 
                 delegate: Item {
                     width: ListView.view.width
-                    height: _itemLayout.implicitHeight + FishUI.Units.largeSpacing * 2
+                    height: _itemLayout.implicitHeight + Youi.Units.largeSpacing * 2
 
                     readonly property var currentPort: Ports[ActivePortIndex]
 
                     Rectangle {
                         anchors.fill: parent
-                        color: FishUI.Theme.secondBackgroundColor
-                        radius: FishUI.Theme.bigRadius
+                        color: Youi.Theme.secondBackgroundColor
+                        radius: Youi.Theme.smallRadius
+                        border.color: Youi.Theme.borderColor
+                        border.width: 1
+                        Behavior on border.color {
+                            ColorAnimation {
+                                duration: 200
+                                easing.type: Easing.Linear
+                            }
+                        }
                     }
 
                     ColumnLayout {
                         id: _itemLayout
                         anchors.fill: parent
-                        anchors.margins: FishUI.Units.largeSpacing
-                        spacing: FishUI.Units.largeSpacing
+                        anchors.margins: Youi.Units.largeSpacing
+                        spacing: Youi.Units.largeSpacing
 
                         Label {
                             text: !currentPort ? Description : currentPort.description
                         }
 
                         RowLayout {
-                            spacing: FishUI.Units.largeSpacing
+                            spacing: Youi.Units.largeSpacing
 
                             Label{
                                 font.family: "FluentSystemIcons-Regular"
-                                color: FishUI.Theme.textColor
+                                color: Youi.Theme.textColor
                                 font.pixelSize: 16
                                 antialiasing: false
                                 smooth: false
@@ -165,14 +173,14 @@ ItemPage {
             }
 
             Item {
-                height: FishUI.Units.largeSpacing * 2
+                height: Youi.Units.largeSpacing * 2
             }
 
             Label {
                 text: qsTr("Input Devices")
-                leftPadding: FishUI.Units.largeSpacing
-                bottomPadding: FishUI.Units.smallSpacing
-                color: FishUI.Theme.disabledTextColor
+                leftPadding: Youi.Units.largeSpacing
+                bottomPadding: Youi.Units.smallSpacing
+                color: Youi.Theme.disabledTextColor
                 visible: sinkInputView.count >= 1
             }
 
@@ -183,40 +191,40 @@ ItemPage {
                 Layout.preferredHeight: contentHeight
 
                 interactive: false
-                spacing: FishUI.Units.largeSpacing
+                spacing: Youi.Units.largeSpacing
                 model: paSourceFilterModel
 
                 delegate: Item {
                     width: ListView.view.width
-                    height: _layout.implicitHeight + FishUI.Units.largeSpacing * 2
+                    height: _layout.implicitHeight + Youi.Units.largeSpacing * 2
 
                     readonly property var currentPort: Ports[ActivePortIndex]
 
                     Rectangle {
                         anchors.fill: parent
-                        color: FishUI.Theme.secondBackgroundColor
-                        radius: FishUI.Theme.bigRadius
+                        color: Youi.Theme.secondBackgroundColor
+                        radius: Youi.Theme.bigRadius
                     }
 
                     ColumnLayout {
                         id: _layout
                         anchors.fill: parent
-                        anchors.margins: FishUI.Units.largeSpacing
-                        spacing: FishUI.Units.largeSpacing
+                        anchors.margins: Youi.Units.largeSpacing
+                        spacing: Youi.Units.largeSpacing
 
                         Label {
                             text: !currentPort ? Description : currentPort.description
                         }
 
                         RowLayout {
-                            spacing: FishUI.Units.largeSpacing
+                            spacing: Youi.Units.largeSpacing
 
                             Image {
                                 Layout.leftMargin: 2
                                 height: 16
                                 width: height
                                 sourceSize: Qt.size(width, height)
-                                source: "qrc:/images/" + (FishUI.Theme.darkMode ? "dark" : "light") + "/" + microphoneIcon(_slider.value / _slider.to * 100) + ".svg"
+                                source: "qrc:/images/" + (Youi.Theme.darkMode ? "dark" : "light") + "/" + microphoneIcon(_slider.value / _slider.to * 100) + ".svg"
                                 smooth: false
                                 antialiasing: true
                             }
@@ -247,7 +255,7 @@ ItemPage {
             }
 
             Item {
-                height: FishUI.Units.largeSpacing * 2
+                height: Youi.Units.largeSpacing * 2
             }
         }
     }

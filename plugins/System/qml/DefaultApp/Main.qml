@@ -21,7 +21,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.Settings 1.0
 import "../../"
 
@@ -43,7 +43,7 @@ ItemPage {
             RoundedItem {
                 GridLayout {
                     columns: 2
-                    columnSpacing: FishUI.Units.largeSpacing * 2
+                    columnSpacing: Youi.Units.largeSpacing * 2
 
                     Label {
                         text: qsTr("Web Browser")

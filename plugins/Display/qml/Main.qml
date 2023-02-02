@@ -22,7 +22,7 @@ import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import Yoyo.Settings 1.0
 import Yoyo.Screen 1.0 as CS
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import "../"
 
 ItemPage {
@@ -57,28 +57,22 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: FishUI.Units.largeSpacing * 2
-
+            Label {
+                text: qsTr("Brightness")
+                Layout.leftMargin: Youi.Units.largeSpacing * 1.5
+                color: Youi.Theme.disabledTextColor
+                visible: brightness.enabled
+            }
             RoundedItem {
                 Layout.fillWidth: true
                 visible: brightness.enabled
 
-                Label {
-                    text: qsTr("Brightness")
-                    color: FishUI.Theme.disabledTextColor
-                    visible: brightness.enabled
-                }
-
-                Item {
-                    height: FishUI.Units.smallSpacing / 2
-                }
-
                 RowLayout {
-                    spacing: FishUI.Units.largeSpacing
+                    spacing: Youi.Units.largeSpacing
 
                     Label{
                         font.family: "FluentSystemIcons-Regular"
-                        color: FishUI.Theme.textColor
+                        color: Youi.Theme.textColor
                         font.pixelSize: 20
                         antialiasing: false
                         smooth: false
@@ -104,28 +98,47 @@ ItemPage {
 
                     Label{
                         font.family: "FluentSystemIcons-Regular"
-                        color: FishUI.Theme.textColor
+                        color: Youi.Theme.textColor
                         font.pixelSize: 20
                         antialiasing: false
                         smooth: false
                         text: "\ue1fe"
                     }
                 }
-
-                Item {
-                    height: FishUI.Units.smallSpacing / 2
+            }
+            Label {
+                text: qsTr("Screen")
+                Layout.leftMargin: Youi.Units.largeSpacing * 1.5
+                color: Youi.Theme.disabledTextColor
+                visible: _screenView.count > 0
+            }
+            RoundedItem {
+                visible: _screenView.count > 1
+                GridLayout {
+                    columns: 2
+                    columnSpacing: Youi.Units.largeSpacing * 1.5
+                    rowSpacing: Youi.Units.largeSpacing * 1.5
+               Label {
+                    text: qsTr("Screen Name")
+                    Layout.fillWidth: true
+                }
+                ComboBox {
+                    id: _screenComboBox
+                    model: screen.outputModel
+                    Layout.fillWidth: true
+                    leftPadding: Youi.Units.largeSpacing
+                    rightPadding: Youi.Units.largeSpacing
+                    topInset: 0
+                    bottomInset: 0
+                    textRole: "display"
+                    onCurrentIndexChanged: {
+                        _screenView.currentIndex = currentIndex
+                    }
+                    }
                 }
             }
-
-            RoundedItem {
+            ColumnLayout {
                 visible: _screenView.count > 0
-
-                Label {
-                    text: qsTr("Screen")
-                    color: FishUI.Theme.disabledTextColor
-                    visible: _screenView.count > 0
-                }
-
                 ListView {
                     id: _screenView
                     Layout.fillWidth: true
@@ -134,7 +147,7 @@ ItemPage {
                     interactive: false
                     clip: true
 
-                    Layout.preferredHeight: currentItem ? currentItem.layout.implicitHeight + FishUI.Units.largeSpacing : 0
+                    Layout.preferredHeight: currentItem ? currentItem.layout.implicitHeight + Youi.Units.largeSpacing : 0
 
                     Behavior on Layout.preferredHeight {
                         NumberAnimation {
@@ -154,32 +167,44 @@ ItemPage {
                         ColumnLayout {
                             id: _mainLayout
                             anchors.fill: parent
-
+                            RoundedItem {
+                                visible: enabledBox.visible
                             GridLayout {
                                 columns: 2
-                                columnSpacing: FishUI.Units.largeSpacing * 1.5
-                                rowSpacing: FishUI.Units.largeSpacing * 1.5
-
+                                columnSpacing: Youi.Units.largeSpacing * 1.5
+                                rowSpacing: Youi.Units.largeSpacing * 1.5
                                 Label {
-                                    text: qsTr("Screen Name")
-                                    visible: _screenView.count > 1
+                                    text: qsTr("Enabled")
+                                    Layout.fillWidth: true
+                                    visible: enabledBox.visible
                                 }
 
-                                Label {
-                                    text: element.display
-                                    color: FishUI.Theme.disabledTextColor
+                                CheckBox {
+                                    id: enabledBox
+                                    checked: element.enabled
                                     visible: _screenView.count > 1
+                                    onClicked: {
+                                        element.enabled = checked
+                                        screen.save()
+                                    }
                                 }
+                            }
+                            }
+                            RoundedItem {
+                            GridLayout {
+                                columns: 2
+                                columnSpacing: Youi.Units.largeSpacing * 1.5
+                                rowSpacing: Youi.Units.largeSpacing * 1.5
 
                                 Label {
                                     text: qsTr("Resolution")
+                                    Layout.fillWidth: true
                                 }
 
                                 ComboBox {
-                                    Layout.fillWidth: true
                                     model: element.resolutions
-                                    leftPadding: FishUI.Units.largeSpacing
-                                    rightPadding: FishUI.Units.largeSpacing
+                                    leftPadding: Youi.Units.largeSpacing
+                                    rightPadding: Youi.Units.largeSpacing
                                     topInset: 0
                                     bottomInset: 0
                                     currentIndex: element.resolutionIndex !== undefined ?
@@ -189,17 +214,25 @@ ItemPage {
                                         screen.save()
                                     }
                                 }
+                                }
+                            }
+
+                            RoundedItem {
+                            GridLayout {
+                                columns: 2
+                                columnSpacing: Youi.Units.largeSpacing * 1.5
+                                rowSpacing: Youi.Units.largeSpacing * 1.5
 
                                 Label {
                                     text: qsTr("Refresh rate")
+                                    Layout.fillWidth: true
                                 }
 
                                 ComboBox {
                                     id: refreshRate
-                                    Layout.fillWidth: true
                                     model: element.refreshRates
-                                    leftPadding: FishUI.Units.largeSpacing
-                                    rightPadding: FishUI.Units.largeSpacing
+                                    leftPadding: Youi.Units.largeSpacing
+                                    rightPadding: Youi.Units.largeSpacing
                                     topInset: 0
                                     bottomInset: 0
                                     currentIndex: element.refreshRateIndex ?
@@ -209,6 +242,14 @@ ItemPage {
                                         screen.save()
                                     }
                                 }
+                            }
+                            }
+//                            RoundedItem {
+//                            GridLayout {
+//                                columns: 2
+//                                columnSpacing: Youi.Units.largeSpacing * 1.5
+//                                rowSpacing: Youi.Units.largeSpacing * 1.5
+
 
 //                                Label {
 //                                    text: qsTr("Rotation")
@@ -253,67 +294,28 @@ ItemPage {
 //                                        }
 //                                    }
 //                                }
-
-                                Label {
-                                    text: qsTr("Enabled")
-                                    visible: enabledBox.visible
-                                }
-
-                                CheckBox {
-                                    id: enabledBox
-                                    checked: element.enabled
-                                    visible: _screenView.count > 1
-                                    onClicked: {
-                                        element.enabled = checked
-                                        screen.save()
-                                    }
-                                }
-                            }
+//                        }
+//                    }
                         }
                     }
-                }
-
-                PageIndicator {
-                    id: screenPageIndicator
-                    Layout.alignment: Qt.AlignHCenter
-                    count: _screenView.count
-                    currentIndex: _screenView.currentIndex
-                    onCurrentIndexChanged: _screenView.currentIndex = currentIndex
-                    interactive: true
-                    visible: count > 1
                 }
             }
 
             RoundedItem {
+                GridLayout {
+                    columns: 2
+                    columnSpacing: Youi.Units.largeSpacing * 1.5
+                    rowSpacing: Youi.Units.largeSpacing * 1.5
                 Label {
                     text: qsTr("Scale")
-                    color: FishUI.Theme.disabledTextColor
-                }
-
-                TabBar {
-                    id: dockSizeTabbar
                     Layout.fillWidth: true
-
-                    TabButton {
-                        text: "100%"
-                    }
-
-                    TabButton {
-                        text: "125%"
-                    }
-
-                    TabButton {
-                        text: "150%"
-                    }
-
-                    TabButton {
-                        text: "175%"
-                    }
-
-                    TabButton {
-                        text: "200%"
-                    }
-
+                }
+                ComboBox {
+                    model: ["100%","125%","150%","175%","200%"]
+                    leftPadding: Youi.Units.largeSpacing
+                    rightPadding: Youi.Units.largeSpacing
+                    topInset: 0
+                    bottomInset: 0
                     currentIndex: {
                         var index = 0
 
@@ -330,8 +332,7 @@ ItemPage {
 
                         return index
                     }
-
-                    onCurrentIndexChanged: {
+                    onActivated: {
                         var value = 1.0
 
                         switch (currentIndex) {
@@ -356,6 +357,7 @@ ItemPage {
                             appearance.setDevicePixelRatio(value)
                         }
                     }
+                }
                 }
             }
 

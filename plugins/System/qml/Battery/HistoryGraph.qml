@@ -19,7 +19,7 @@
  */
 
 import QtQuick 2.12
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 
 /**
  * We need to draw a graph, all other libs are not suitable as we are basically
@@ -73,10 +73,10 @@ Canvas {
             height - yPadding - scaledY);
     }
 
-    property bool darkMode: FishUI.Theme.darkMode
-    property color textColor: FishUI.Theme.textColor
-    property color bgColor: FishUI.Theme.secondBackgroundColor
-    property color highlightColor: FishUI.Theme.highlightColor
+    property bool darkMode: Youi.Theme.darkMode
+    property color textColor: Youi.Theme.textColor
+    property color bgColor: Youi.Theme.secondBackgroundColor
+    property color highlightColor: Youi.Theme.highlightColor
 
     onDarkModeChanged: {
         canvas.requestPaint()
@@ -165,7 +165,7 @@ Canvas {
         // Draw the X value texts
         c.textAlign = "center"
         c.lineWidth = 1
-        c.strokeStyle = FishUI.Theme.darkMode ? 'rgba(0, 0, 0, 0.35)' : 'rgba(0, 0, 0, 0.15)'
+        c.strokeStyle = Youi.Theme.darkMode ? 'rgba(0, 0, 0, 0.35)' : 'rgba(0, 0, 0, 0.15)'
 
         var xDivisions = xDuration / xDivisionWidth * 1000
         var xGridDistance = plotWidth / xDivisions

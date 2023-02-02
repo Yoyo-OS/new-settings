@@ -20,7 +20,7 @@
 import QtQuick 2.4
 import QtQuick.Controls 2.4
 import QtGraphicalEffects 1.0
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 
 Item {
     id: control

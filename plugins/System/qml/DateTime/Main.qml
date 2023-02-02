@@ -20,7 +20,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.Settings 1.0
 import "../../"
 
@@ -46,10 +46,10 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: FishUI.Units.largeSpacing * 2
+            spacing: Youi.Units.largeSpacing * 2
 
             RoundedItem {
-                spacing: FishUI.Units.largeSpacing * 1.5
+                spacing: Youi.Units.largeSpacing * 1.5
 
                 RowLayout {
                     Label {
@@ -88,7 +88,7 @@ ItemPage {
                 }
             }
 
-            StandardButton {
+            Button {
                 Layout.fillWidth: true
                 text: ""
                 // onClicked: timeZoneDialog.visibility = "Maximized"
@@ -96,8 +96,8 @@ ItemPage {
 
                 RowLayout {
                     anchors.fill: parent
-                    anchors.leftMargin: FishUI.Units.largeSpacing * 1.5
-                    anchors.rightMargin: FishUI.Units.largeSpacing * 1.5
+                    anchors.leftMargin: Youi.Units.largeSpacing * 1.5
+                    anchors.rightMargin: Youi.Units.largeSpacing * 1.5
 
                     Label {
                         text: qsTr("Time Zone")

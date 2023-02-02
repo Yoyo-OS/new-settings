@@ -3,17 +3,17 @@ import QtQuick.Window 2.12
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import Yoyo.Settings 1.0
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import "../"
 
-FishUI.Window {
+Youi.Window {
     id: control
 
     width: contentWidth
     height: contentHeight
 
-    property int contentWidth: mainLayout.implicitWidth + FishUI.Units.largeSpacing * 2 + control.header.height
-    property int contentHeight: mainLayout.implicitHeight + FishUI.Units.largeSpacing * 2 + control.header.height
+    property int contentWidth: mainLayout.implicitWidth + Youi.Units.largeSpacing * 2 + control.header.height
+    property int contentHeight: mainLayout.implicitHeight + Youi.Units.largeSpacing * 2 + control.header.height
 
     minimumWidth: contentWidth
     minimumHeight: contentHeight
@@ -27,11 +27,11 @@ FishUI.Window {
 
     property var pin: ""
 
-    background.color: FishUI.Theme.secondBackgroundColor
+    background.color: Youi.Theme.secondBackgroundColor
     headerItem: Item {
         Label {
             anchors.fill: parent
-            anchors.leftMargin: FishUI.Units.largeSpacing
+            anchors.leftMargin: Youi.Units.largeSpacing
             text: control.title
         }
     }
@@ -46,7 +46,7 @@ FishUI.Window {
     ColumnLayout {
         id: mainLayout
         anchors.fill: parent
-        anchors.margins: FishUI.Units.largeSpacing
+        anchors.margins: Youi.Units.largeSpacing
 
         Label {
             text: qsTr("Bluetooth Pairing Request")
@@ -59,11 +59,11 @@ FishUI.Window {
             font.pointSize: 16
 
             Layout.alignment: Qt.AlignHCenter
-            Layout.bottomMargin: FishUI.Units.largeSpacing
+            Layout.bottomMargin: Youi.Units.largeSpacing
         }
 
         RowLayout {
-            spacing: FishUI.Units.largeSpacing
+            spacing: Youi.Units.largeSpacing
 
             Button {
                 text: qsTr("Cancel")

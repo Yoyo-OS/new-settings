@@ -22,7 +22,7 @@ import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.NetworkManagement 1.0 as NM
 
 Item {
@@ -30,10 +30,10 @@ Item {
 
     Rectangle {
         anchors.fill: parent
-        radius: FishUI.Theme.smallRadius
-        color: mouseArea.containsMouse ? Qt.rgba(FishUI.Theme.textColor.r,
-                                                 FishUI.Theme.textColor.g,
-                                                 FishUI.Theme.textColor.b,
+        radius: Youi.Theme.smallRadius
+        color: mouseArea.containsMouse ? Qt.rgba(Youi.Theme.textColor.r,
+                                                 Youi.Theme.textColor.g,
+                                                 Youi.Theme.textColor.b,
                                                  0.1) : "transparent"
 
         Behavior on color {
@@ -59,12 +59,12 @@ Item {
 
     RowLayout {
         anchors.fill: parent
-        anchors.margins: FishUI.Units.smallSpacing
-        spacing: FishUI.Units.largeSpacing
+        anchors.margins: Youi.Units.smallSpacing
+        spacing: Youi.Units.largeSpacing
 
         Label{
             font.family: "FluentSystemIcons-Regular"
-            color: FishUI.Theme.textColor
+            color: Youi.Theme.textColor
             font.pixelSize: 20
             antialiasing: false
             smooth: false
@@ -79,7 +79,7 @@ Item {
         // Activated
         Label{
             font.family: "FluentSystemIcons-Regular"
-            color: FishUI.Theme.highlightColor
+            color: Youi.Theme.highlightColor
             font.pixelSize: 20
             antialiasing: false
             smooth: false

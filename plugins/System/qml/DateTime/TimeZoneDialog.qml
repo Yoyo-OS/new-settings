@@ -21,9 +21,9 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Window 2.12
 import QtQuick.Layouts 1.12
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 
-FishUI.Window {
+Youi.Window {
     id: control
     width: 900
     height: 600
@@ -32,7 +32,7 @@ FishUI.Window {
     visible: false
     flags: Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint
 
-    background.color: FishUI.Theme.secondBackgroundColor
+    background.color: Youi.Theme.secondBackgroundColor
     background.opacity: control.compositing ? 0.5 : 1.0
     contentTopMargin: 0
 
@@ -59,7 +59,7 @@ FishUI.Window {
         }
     }
 
-    FishUI.WindowBlur {
+    Youi.WindowBlur {
         view: control
         geometry: Qt.rect(control.x, control.y, control.width, control.height)
         windowRadius: control.background.radius
@@ -79,13 +79,13 @@ FishUI.Window {
 
     ColumnLayout {
         anchors.fill: parent
-        anchors.margins: FishUI.Units.largeSpacing
+        anchors.margins: Youi.Units.largeSpacing
 
         Image {
             id: _worldMap
             Layout.fillWidth: true
             Layout.fillHeight: true
-            source: FishUI.Theme.darkMode ? "qrc:/System/images/dark/world.svg" : "qrc:/System/images/light/world.svg"
+            source: Youi.Theme.darkMode ? "qrc:/System/images/dark/world.svg" : "qrc:/System/images/light/world.svg"
             sourceSize: Qt.size(width, height)
             fillMode: Image.PreserveAspectFit
 
@@ -94,13 +94,13 @@ FishUI.Window {
                 width: 20
                 height: 20
                 radius: height / 2
-                color: FishUI.Theme.highlightColor
+                color: Youi.Theme.highlightColor
                 z: 99
                 visible: false
                 border.width: 5
-                border.color: Qt.rgba(FishUI.Theme.highlightColor.r,
-                                      FishUI.Theme.highlightColor.g,
-                                      FishUI.Theme.highlightColor.b, 0.5)
+                border.color: Qt.rgba(Youi.Theme.highlightColor.r,
+                                      Youi.Theme.highlightColor.g,
+                                      Youi.Theme.highlightColor.b, 0.5)
 
                 function show(x, y) {
                     dot.x = x - dot.width / 2
@@ -112,20 +112,20 @@ FishUI.Window {
             Item {
                 id: popupItem
                 visible: popupText.text !== ""
-                width: popupText.implicitWidth + FishUI.Units.largeSpacing
-                height: popupText.implicitHeight + FishUI.Units.largeSpacing
+                width: popupText.implicitWidth + Youi.Units.largeSpacing
+                height: popupText.implicitHeight + Youi.Units.largeSpacing
 
                 Rectangle {
                     anchors.fill: parent
-                    radius: FishUI.Theme.smallRadius
-                    color: FishUI.Theme.highlightColor
+                    radius: Youi.Theme.smallRadius
+                    color: Youi.Theme.highlightColor
                 }
 
                 Label {
                     id: popupText
                     anchors.centerIn: parent
                     text: timeZoneMap.availableList[0] ? timeZoneMap.availableList[0] : ""
-                    color: FishUI.Theme.highlightedTextColor
+                    color: Youi.Theme.highlightedTextColor
                 }
             }
 
@@ -136,8 +136,8 @@ FishUI.Window {
                     timeZoneMap.clicked(mouse.x, mouse.y, _worldMap.width, _worldMap.height)
                     dot.show(mouse.x, mouse.y)
 
-                    popupItem.x = mouse.x + FishUI.Units.smallSpacing * 1.5
-                    popupItem.y = mouse.y + FishUI.Units.smallSpacing * 1.5
+                    popupItem.x = mouse.x + Youi.Units.smallSpacing * 1.5
+                    popupItem.y = mouse.y + Youi.Units.smallSpacing * 1.5
 
                     if (popupItem.x + popupItem.width >= _worldMap.width)
                         popupItem.x = _worldMap.width - popupItem.width - 2
@@ -151,7 +151,7 @@ FishUI.Window {
         }
 
         RowLayout {
-            spacing: FishUI.Units.largeSpacing
+            spacing: Youi.Units.largeSpacing
 
             Item {
                 Layout.fillWidth: true

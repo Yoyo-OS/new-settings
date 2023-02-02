@@ -22,7 +22,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import QtGraphicalEffects 1.0
 
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.Settings 1.0
 import Yoyo.Accounts 1.0
 import "../../"
@@ -49,13 +49,13 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: FishUI.Units.largeSpacing * 2
+            spacing: Youi.Units.largeSpacing * 2
 
             RoundedItem {
                 GridLayout {
                     columns: 2
-                    columnSpacing: FishUI.Units.largeSpacing * 1.5
-                    rowSpacing: FishUI.Units.largeSpacing * 2
+                    columnSpacing: Youi.Units.largeSpacing * 1.5
+                    rowSpacing: Youi.Units.largeSpacing * 2
 
                     Label {
                         text: qsTr("Left hand")
@@ -108,7 +108,7 @@ ItemPage {
                 HorizontalDivider {}
 
                 RowLayout {
-                    spacing: FishUI.Units.largeSpacing * 2
+                    spacing: Youi.Units.largeSpacing * 2
 
                     Label {
                         text: qsTr("Pointer speed")
@@ -117,7 +117,7 @@ ItemPage {
                     Slider {
                         id: accelerationSlider
                         Layout.fillWidth: true
-                        rightPadding: FishUI.Units.largeSpacing
+                        rightPadding: Youi.Units.largeSpacing
                         from: 1
                         to: 11
                         stepSize: 1
@@ -138,14 +138,14 @@ ItemPage {
             RoundedItem {
                 Label {
                     text: qsTr("Theme")
-                    color: FishUI.Theme.disabledTextColor
+                    color: Youi.Theme.disabledTextColor
                     visible: _view.count > 0
                 }
 
                 GridView {
                     id: _view
                     Layout.fillWidth: true
-                    implicitHeight: Math.ceil(_view.count / rowCount) * cellHeight + FishUI.Units.largeSpacing
+                    implicitHeight: Math.ceil(_view.count / rowCount) * cellHeight + Youi.Units.largeSpacing
                     model: cursorModel
                     interactive: false
                     visible: _view.count > 0
@@ -190,7 +190,7 @@ ItemPage {
                         MouseArea {
                             id: _mouseArea
                             anchors.fill: parent
-                            anchors.margins: FishUI.Units.smallSpacing * 1.5
+                            anchors.margins: Youi.Units.smallSpacing * 1.5
                             onClicked: {
                                 _view.currentIndex = index
                                 cursorModel.currentTheme = model.id
@@ -200,28 +200,28 @@ ItemPage {
 
                         Rectangle {
                             anchors.fill: parent
-                            anchors.margins: FishUI.Units.smallSpacing * 1.5
-                            color: FishUI.Theme.darkMode ? "#3C3C3C" : "#FAFAFA"
-                            radius: FishUI.Theme.mediumRadius
+                            anchors.margins: Youi.Units.smallSpacing * 1.5
+                            color: Youi.Theme.darkMode ? "#3C3C3C" : "#FAFAFA"
+                            radius: Youi.Theme.mediumRadius
                             z: -1
 
                             border.width: isCurrent ? 3 : 0
-                            border.color: FishUI.Theme.highlightColor
+                            border.color: Youi.Theme.highlightColor
                         }
 
                         ColumnLayout {
                             anchors.fill: parent
-                            anchors.margins: FishUI.Units.smallSpacing * 1.5
+                            anchors.margins: Youi.Units.smallSpacing * 1.5
 
                             Item {
                                 Layout.fillHeight: true
                             }
 
                             Item {
-                                height: FishUI.Units.largeSpacing
+                                height: Youi.Units.largeSpacing
                             }
 
-                            FishUI.IconItem {
+                            Youi.IconItem {
                                 width: 22
                                 height: 22
                                 source: model.image
@@ -236,7 +236,7 @@ ItemPage {
                             Label {
                                 text: model.name
                                 Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-                                bottomPadding: FishUI.Units.largeSpacing
+                                bottomPadding: Youi.Units.largeSpacing
                             }
 
                             Item {
@@ -248,7 +248,7 @@ ItemPage {
             }
 
             Item {
-                height: FishUI.Units.smallSpacing
+                height: Youi.Units.smallSpacing
             }
         }
     }

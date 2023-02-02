@@ -22,7 +22,7 @@ import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.NetworkManagement 1.0 as NM
 
 import "../../"
@@ -85,20 +85,20 @@ ItemPage {
         ColumnLayout {
             id: mainLayout
             anchors.fill: parent
-            anchors.bottomMargin: FishUI.Units.largeSpacing
-            spacing: FishUI.Units.largeSpacing * 2
+            anchors.bottomMargin: Youi.Units.largeSpacing
+            spacing: Youi.Units.largeSpacing * 2
 
             // Wired connection
             RoundedItem {
                 visible: enabledConnections.wwanHwEnabled
-                spacing: FishUI.Units.largeSpacing
+                spacing: Youi.Units.largeSpacing
 
                 RowLayout {
-                    spacing: FishUI.Units.largeSpacing
+                    spacing: Youi.Units.largeSpacing
 
                     Label {
                         text: qsTr("Ethernet")
-                        color: FishUI.Theme.disabledTextColor
+                        color: Youi.Theme.disabledTextColor
                         Layout.fillWidth: true
                     }
 
@@ -151,14 +151,14 @@ ItemPage {
                 }
             }
 
-            StandardButton {
+            Button {
                 Layout.fillWidth: true
                 text: qsTr("Add other...")
                 onClicked: newNetworkDialog.show()
             }
 
             Item {
-                height: FishUI.Units.largeSpacing
+                height: Youi.Units.largeSpacing
             }
         }
     }

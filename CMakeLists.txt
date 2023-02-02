@@ -16,7 +16,7 @@ set(QT Core Gui Widgets Quick QuickControls2 DBus LinguistTools)
 set(TS_FILES translations/*.ts)
 
 find_package(Qt5 REQUIRED ${QT})
-# find_package(FishUI REQUIRED)
+# find_package(Youi REQUIRED)
 find_package(PkgConfig REQUIRED)
 
 # 更新 .ts 翻译文件

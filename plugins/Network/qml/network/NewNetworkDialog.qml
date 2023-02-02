@@ -22,10 +22,10 @@ import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 
-import FishUI 1.0 as FishUI
+import Youi 1.0 as Youi
 import Yoyo.NetworkManagement 1.0 as NM
 
-FishUI.Window {
+Youi.Window {
     id: control
 
     width: contentWidth
@@ -36,13 +36,13 @@ FishUI.Window {
     maximumHeight: contentHeight
     modality: Qt.WindowModal
 
-    property int contentWidth: _mainLayout.implicitWidth + header.height + FishUI.Units.largeSpacing * 2
-    property int contentHeight: _mainLayout.implicitHeight + header.height + FishUI.Units.largeSpacing * 2
+    property int contentWidth: _mainLayout.implicitWidth + header.height + Youi.Units.largeSpacing * 2
+    property int contentHeight: _mainLayout.implicitHeight + header.height + Youi.Units.largeSpacing * 2
 
     visible: false
     minimizeButtonVisible: false
 
-    background.color: FishUI.Theme.secondBackgroundColor
+    background.color: Youi.Theme.secondBackgroundColor
     flags: Qt.Dialog | Qt.FramelessWindowHint
 
     signal connect(var ssid, var username, var pwd, var type)
@@ -61,14 +61,14 @@ FishUI.Window {
     ColumnLayout {
         id: _mainLayout
         anchors.fill: parent
-        anchors.margins: FishUI.Units.largeSpacing
+        anchors.margins: Youi.Units.largeSpacing
         anchors.topMargin: 0
-        spacing: FishUI.Units.largeSpacing
+        spacing: Youi.Units.largeSpacing
 
         GridLayout {
             columns: 2
-            columnSpacing: FishUI.Units.largeSpacing * 2
-            rowSpacing: FishUI.Units.largeSpacing
+            columnSpacing: Youi.Units.largeSpacing * 2
+            rowSpacing: Youi.Units.largeSpacing
 
             Label {
                 text: qsTr("Name")
@@ -122,7 +122,7 @@ FishUI.Window {
         }
 
         RowLayout {
-            spacing: FishUI.Units.largeSpacing
+            spacing: Youi.Units.largeSpacing
 
             Button {
                 text: qsTr("Cancel")
