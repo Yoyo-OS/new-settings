@@ -43,6 +43,8 @@ install(DIRECTORY ${HEADERS} DESTINATION ${INCLUDE_INSTALL_DIR})
 
 include(CMakePackageConfigHelpers)
 
+set(CMAKECONFIG_INSTALL_DIR "${CMAKE_INSTALL_LIBDIR}/cmake/YoyoSettings")
+
 configure_package_config_file(
         "${CMAKE_CURRENT_SOURCE_DIR}/YoyoSettingsConfig.cmake.in"
         "${CMAKE_CURRENT_BINARY_DIR}/YoyoSettingsConfig.cmake"
