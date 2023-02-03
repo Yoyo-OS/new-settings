@@ -13,7 +13,7 @@ find_package(QT NAMES Qt6 Qt5 COMPONENTS Gui Quick REQUIRED Dbus X11Extras)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Gui REQUIRED X11Extras)
 find_package(KF5Config)
 find_package(X11 REQUIRED)
-
+find_package(Libcrypt REQUIRED)
 
 add_library(SystemPlugin SHARED
     ../../include/yoyo-settings/dataObject.h
@@ -48,6 +48,7 @@ target_link_libraries(SystemPlugin PRIVATE
     Qt${QT_VERSION_MAJOR}::DBus
     Qt${QT_VERSION_MAJOR}::X11Extras
     ${X11_LIBRARIES}
+    Libcrypt::Libcrypt
     X11::X11
     X11::Xi
     X11::Xcursor
