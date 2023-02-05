@@ -49,12 +49,16 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: Youi.Units.largeSpacing * 2
+            spacing: Youi.Units.largeSpacing
 
+            Label {
+                text: qsTr("Habit")
+                color: Youi.Theme.disabledTextColor
+            }
             RoundedItem {
                 GridLayout {
                     columns: 2
-                    columnSpacing: Youi.Units.largeSpacing * 1.5
+                    columnSpacing: Youi.Units.largeSpacing
                     rowSpacing: Youi.Units.largeSpacing * 2
 
                     Label {
@@ -108,7 +112,7 @@ ItemPage {
                 HorizontalDivider {}
 
                 RowLayout {
-                    spacing: Youi.Units.largeSpacing * 2
+                    spacing: Youi.Units.largeSpacing
 
                     Label {
                         text: qsTr("Pointer speed")
@@ -135,13 +139,12 @@ ItemPage {
                 }
             }
 
+            Label {
+                text: qsTr("Theme")
+                color: Youi.Theme.disabledTextColor
+                visible: _view.count > 0
+            }
             RoundedItem {
-                Label {
-                    text: qsTr("Theme")
-                    color: Youi.Theme.disabledTextColor
-                    visible: _view.count > 0
-                }
-
                 GridView {
                     id: _view
                     Layout.fillWidth: true

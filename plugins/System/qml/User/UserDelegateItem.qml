@@ -270,19 +270,19 @@ RoundedItem {
 
             // Change password end.
 
-            StandardButton {
+            Button {
                 text: qsTr("Change password")
                 onClicked: showChangePasswordItem()
-                backgroundColor: Youi.Theme.darkMode ? "#363636" : Youi.Theme.backgroundColor
+                flat: true
                 Layout.fillWidth: true
                 visible: !changePasswdLabel.visible
             }
 
-            StandardButton {
+            Button {
                 text: qsTr("Delete this user")
                 enabled: model.userId !== loggedUser.userId
                 onClicked: accountsManager.deleteUser(userId, true)
-                backgroundColor: Youi.Theme.darkMode ? "#363636" : Youi.Theme.backgroundColor
+                flat: true
                 Layout.fillWidth: true
             }
         }

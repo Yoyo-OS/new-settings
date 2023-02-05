@@ -28,4 +28,9 @@ import "../../"
 ComboBox {
     id: control
     textRole: "name"
+    implicitWidth: 300
+    topInset: 0
+    bottomInset: 0
+    leftPadding: Youi.Units.largeSpacing
+    rightPadding: Youi.Units.largeSpacing
 }

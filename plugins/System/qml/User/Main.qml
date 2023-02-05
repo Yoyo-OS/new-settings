@@ -58,13 +58,13 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: Youi.Units.largeSpacing * 2
+            spacing: Youi.Units.largeSpacing
 
             ListView {
                 id: _userView
                 model: userModel
                 Layout.fillWidth: true
-                spacing: Youi.Units.largeSpacing * 2
+                spacing: Youi.Units.largeSpacing
                 interactive: false
 
                 Layout.preferredHeight: {
@@ -95,7 +95,6 @@ ItemPage {
 
                 ColumnLayout {
                     id: _mainLayout
-                    spacing: Youi.Units.largeSpacing * 1.5
 
                     Label {
                         text: qsTr("Add new user")
@@ -103,7 +102,6 @@ ItemPage {
 
                     GridLayout {
                         columns: 2
-                        columnSpacing: Youi.Units.largeSpacing * 2
                         rowSpacing: Youi.Units.smallSpacing * 2
 
                         Label {

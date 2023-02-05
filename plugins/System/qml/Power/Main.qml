@@ -63,13 +63,11 @@ ItemPage {
             id: layout
             anchors.fill: parent
             spacing: Youi.Units.largeSpacing
-
+            Label {
+                text: qsTr("Mode")
+                color: Youi.Theme.disabledTextColor
+            }
             RoundedItem {
-                Label {
-                    text: qsTr("Mode")
-                    color: Youi.Theme.disabledTextColor
-                }
-
                 RowLayout {
                     spacing: Youi.Units.largeSpacing * 2
 
@@ -93,24 +91,16 @@ ItemPage {
                         onClicked: power.mode = 1
                     }
                 }
-            }
-
-            Label {
-                color: Youi.Theme.disabledTextColor
-                leftPadding: Youi.Units.largeSpacing * 2
-                rightPadding: Youi.Units.largeSpacing
-                Layout.fillWidth: true
-                wrapMode: Text.WordWrap
-                text: qsTr("Performance mode: CPU and GPU frequencies will be increased, while power consumption and heat generation will be increased.")
+                Label {
+                    color: Youi.Theme.disabledTextColor
+                    Layout.fillWidth: true
+                    wrapMode: Text.WordWrap
+                    text: qsTr("Performance mode: CPU and GPU frequencies will be increased, while power consumption and heat generation will be increased.")
+                }
             }
 
             RoundedItem {
-                Layout.topMargin: Youi.Units.largeSpacing
-
-                GridLayout {
-                    columns: 2
-                    rowSpacing: Youi.Units.largeSpacing * 2
-                    Layout.bottomMargin: Youi.Units.largeSpacing
+                RowLayout {
 
                     Label {
                         text: qsTr("Turn off screen")
@@ -119,7 +109,10 @@ ItemPage {
 
                     ComboBox {
                         Layout.preferredWidth: 160
-
+                        topInset: 0
+                        bottomInset: 0
+                        leftPadding: Youi.Units.largeSpacing
+                        rightPadding: Youi.Units.largeSpacing
                         model: ListModel {
                             ListElement { text: qsTr("2 Minutes") }
                             ListElement { text: qsTr("5 Minutes") }
@@ -156,7 +149,10 @@ ItemPage {
                             }
                         }
                     }
-
+                }
+            }
+            RoundedItem {
+                RowLayout {
                     Label {
                         text: qsTr("Hibernate after screen is turned off")
                         Layout.fillWidth: true
@@ -168,7 +164,10 @@ ItemPage {
                         checked: power.sleepWhenClosedScreen
                         onClicked: power.sleepWhenClosedScreen = checked
                     }
-
+                }
+            }
+            RoundedItem {
+                RowLayout {
                     Label {
                         text: qsTr("Lock screen after screen is turned off")
                         Layout.fillWidth: true

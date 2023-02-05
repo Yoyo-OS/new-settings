@@ -59,7 +59,6 @@ ItemPage {
             anchors.fill: parent
             Label {
                 text: qsTr("Brightness")
-                Layout.leftMargin: Youi.Units.largeSpacing * 1.5
                 color: Youi.Theme.disabledTextColor
                 visible: brightness.enabled
             }
@@ -108,7 +107,6 @@ ItemPage {
             }
             Label {
                 text: qsTr("Screen")
-                Layout.leftMargin: Youi.Units.largeSpacing * 1.5
                 color: Youi.Theme.disabledTextColor
                 visible: _screenView.count > 0
             }

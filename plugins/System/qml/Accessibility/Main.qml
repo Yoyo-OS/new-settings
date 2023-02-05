@@ -22,15 +22,13 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: Youi.Units.largeSpacing * 2
+            spacing: Youi.Units.largeSpacing
 
+            Label {
+                text: qsTr("Appearance enhancement")
+                color: Youi.Theme.disabledTextColor
+            }
             RoundedItem {
-                Label {
-                    text: qsTr("Appearance enhancement")
-                    color: Youi.Theme.disabledTextColor
-                    //visible: _view.count > 0
-                }
-
                 RowLayout {
                     Label {
                         text: qsTr("Deform windows while they are moving")
@@ -80,13 +78,11 @@ ItemPage {
                 }
             }
 
+            Label {
+                text: qsTr("Barrier free function")
+                color: Youi.Theme.disabledTextColor
+            }
             RoundedItem {
-                Label {
-                    text: qsTr("Barrier free function")
-                    color: Youi.Theme.disabledTextColor
-                    //visible: _view.count > 0
-                }
-
                 RowLayout {
                     Label {
                         text: qsTr("Snap Helper")

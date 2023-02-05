@@ -37,7 +37,7 @@ Page {
         RowLayout{
             anchors.fill: parent
             anchors.topMargin: Youi.Units.smallSpacing * 1.5
-            anchors.leftMargin: Youi.Units.largeSpacing * 3
+            anchors.leftMargin: Youi.Units.largeSpacing * 2
             anchors.rightMargin: Qt.application.layoutDirection === Qt.RightToLeft ? Youi.Units.largeSpacing * 3 : 0
 
             Label {

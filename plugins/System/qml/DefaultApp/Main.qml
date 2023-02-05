@@ -39,20 +39,19 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
+            spacing: Youi.Units.largeSpacing
 
             RoundedItem {
-                GridLayout {
-                    columns: 2
-                    columnSpacing: Youi.Units.largeSpacing * 2
+                RowLayout {
 
                     Label {
                         text: qsTr("Web Browser")
+                        Layout.fillWidth: true
                         enabled: browserComboBox.count !== 0
                     }
 
                     AppComboBox {
                         id: browserComboBox
-                        Layout.fillWidth: true
                         textRole: "name"
                         model: defaultApps.browserList
                         currentIndex: defaultApps.browserIndex
@@ -61,15 +60,18 @@ ItemPage {
                             defaultApps.setDefaultBrowser(browserComboBox.currentIndex)
                         }
                     }
-
+                }
+            }
+            RoundedItem {
+                RowLayout {
                     Label {
                         text: qsTr("File Manager")
+                        Layout.fillWidth: true
                         enabled: fileManagerComboBox.count !== 0
                     }
 
                     AppComboBox {
                         id: fileManagerComboBox
-                        Layout.fillWidth: true
                         textRole: "name"
                         model: defaultApps.fileManagerList
                         currentIndex: defaultApps.fileManagerIndex
@@ -78,15 +80,19 @@ ItemPage {
                             defaultApps.setDefaultFileManager(fileManagerComboBox.currentIndex)
                         }
                     }
+                }
+            }
 
+            RoundedItem {
+                RowLayout {
                     Label {
                         text: qsTr("Email Client")
+                        Layout.fillWidth: true
                         enabled: emailComboBox.count !== 0
                     }
 
                     AppComboBox {
                         id: emailComboBox
-                        Layout.fillWidth: true
                         textRole: "name"
                         model: defaultApps.emailList
                         currentIndex: defaultApps.emailIndex
@@ -95,15 +101,19 @@ ItemPage {
                             defaultApps.setDefaultEMail(emailComboBox.currentIndex)
                         }
                     }
+                }
+            }
 
+            RoundedItem {
+                RowLayout {
                     Label {
                         text: qsTr("Terminal")
+                        Layout.fillWidth: true
                         enabled: terminalComboBox.count !== 0
                     }
 
                     AppComboBox {
                         id: terminalComboBox
-                        Layout.fillWidth: true
                         textRole: "name"
                         model: defaultApps.terminalList
                         currentIndex: defaultApps.terminalIndex

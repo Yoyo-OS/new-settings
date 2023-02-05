@@ -467,6 +467,10 @@
         <source>Add other...</source>
         <translation>添加其它……</translation>
     </message>
+    <message>
+        <source>Habit</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>NetworkPlugin</name>
@@ -805,19 +809,19 @@
     </message>
     <message>
         <source>Small</source>
-        <translation>小</translation>
+        <translation type="vanished">小</translation>
     </message>
     <message>
         <source>Medium</source>
-        <translation>中</translation>
+        <translation type="vanished">中</translation>
     </message>
     <message>
         <source>Large</source>
-        <translation>大</translation>
+        <translation type="vanished">大</translation>
     </message>
     <message>
         <source>Huge</source>
-        <translation>巨大</translation>
+        <translation type="vanished">巨大</translation>
     </message>
     <message>
         <source>Hinting</source>

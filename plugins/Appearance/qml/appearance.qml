@@ -51,14 +51,14 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
+            spacing: Youi.Units.largeSpacing
             // anchors.bottomMargin: Youi.Units.largeSpacing
-            spacing: Youi.Units.largeSpacing * 2
+            Label {
+                text: qsTr("Theme")
+                color: Youi.Theme.disabledTextColor
+            }
 
             RoundedItem {
-                Label {
-                    text: qsTr("Theme")
-                    color: Youi.Theme.disabledTextColor
-                }
 
                 // Light Mode and Dark Mode
                 RowLayout {
@@ -117,6 +117,7 @@ ItemPage {
                 RowLayout {
                     Label {
                         text: qsTr("System effects")
+                        Layout.fillWidth: true
                         Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
                     }
 
@@ -140,6 +141,7 @@ ItemPage {
 
                     Label {
                         text: qsTr("Minimize animation")
+                        Layout.fillWidth: true
                     }
 
                     TabBar {
@@ -157,12 +159,11 @@ ItemPage {
                     }
                 }
             }
-
+            Label {
+                text: qsTr("Accent color")
+                color: Youi.Theme.disabledTextColor
+            }
             RoundedItem {
-                Label {
-                    text: qsTr("Accent color")
-                    color: Youi.Theme.disabledTextColor
-                }
 
                 GridView {
                     id: accentColorView
@@ -237,76 +238,71 @@ ItemPage {
                     }
                 }
             }
-            RoundedItem {
-                Label {
-                    text: qsTr("Fonts")
-                    color: Youi.Theme.disabledTextColor
-                }
-                GridLayout {
-                    rows: 3
-                    columns: 2
+            Label {
+                text: qsTr("Fonts")
+                color: Youi.Theme.disabledTextColor
+            }
 
-                    columnSpacing: Youi.Units.largeSpacing * 1.5
-                    rowSpacing: Youi.Units.largeSpacing * 1.5
+                ColumnLayout {
+                    RoundedItem {
+                        Layout.bottomMargin: Youi.Units.smallSpacing
+                    RowLayout{
 
                     Label {
                         text: qsTr("General Font")
-                        bottomPadding: Youi.Units.smallSpacing
+                        Layout.fillWidth: true
                     }
 
                     ComboBox {
                         id: generalFontComboBox
                         model: fontsModel.generalFonts
                         enabled: true
-                        Layout.fillWidth: true
+                        implicitWidth: 200
                         topInset: 0
                         bottomInset: 0
                         leftPadding: Youi.Units.largeSpacing
                         rightPadding: Youi.Units.largeSpacing
                         onActivated: appearance.setGenericFontFamily(currentText)
                     }
+                    }
+                    }
 
+                    RoundedItem {
+                        Layout.bottomMargin: Youi.Units.smallSpacing
+                    RowLayout{
                     Label {
                         text: qsTr("Fixed Font")
-                        bottomPadding: Youi.Units.smallSpacing
+                        Layout.fillWidth: true
                     }
 
                     ComboBox {
                         id: fixedFontComboBox
                         model: fontsModel.fixedFonts
                         enabled: true
-                        Layout.fillWidth: true
+                        implicitWidth: 200
                         topInset: 0
                         bottomInset: 0
                         leftPadding: Youi.Units.largeSpacing
                         rightPadding: Youi.Units.largeSpacing
                         onActivated: appearance.setFixedFontFamily(currentText)
                     }
-
-                    Label {
-                        text: qsTr("Font Size")
-                        bottomPadding: Youi.Units.smallSpacing
+                    }
                     }
 
-                    TabBar {
+                    RoundedItem {
+                        Layout.bottomMargin: Youi.Units.smallSpacing
+                    RowLayout{
+                    Label {
+                        text: qsTr("Font Size")
                         Layout.fillWidth: true
-
-                        TabButton {
-                            text: qsTr("Small")
-                        }
-
-                        TabButton {
-                            text: qsTr("Medium")
-                        }
-
-                        TabButton {
-                            text: qsTr("Large")
-                        }
-
-                        TabButton {
-                            text: qsTr("Huge")
-                        }
-
+                    }
+                    ComboBox {
+                        model: ["Small","Medium","Large","Huge"]
+                        implicitWidth: 100
+                        topInset: 0
+                        bottomInset: 0
+                        leftPadding: Youi.Units.largeSpacing
+                        rightPadding: Youi.Units.largeSpacing
                         currentIndex: {
                             var index = 0
 
@@ -321,7 +317,6 @@ ItemPage {
 
                             return index
                         }
-
                         onCurrentIndexChanged: {
                             var fontSize = 0
 
@@ -343,23 +338,37 @@ ItemPage {
                             appearance.setFontPointSize(fontSize)
                         }
                     }
+                    }
+                    }
 
+                    RoundedItem {
+                        Layout.bottomMargin: Youi.Units.smallSpacing
+                    RowLayout{
                     Label {
                         text: qsTr("Hinting")
-                        bottomPadding: Youi.Units.smallSpacing
+                        Layout.fillWidth: true
                     }
 
                     ComboBox {
                         model: fonts.hintingModel
                         textRole: "display"
-                        Layout.fillWidth: true
+                        implicitWidth: 100
+                        topInset: 0
+                        bottomInset: 0
+                        leftPadding: Youi.Units.largeSpacing
+                        rightPadding: Youi.Units.largeSpacing
                         currentIndex: fonts.hintingCurrentIndex
                         onCurrentIndexChanged: fonts.hintingCurrentIndex = currentIndex
                     }
+                    }
+                    }
 
+                    RoundedItem {
+                        Layout.bottomMargin: Youi.Units.smallSpacing
+                    RowLayout{
                     Label {
                         text: qsTr("Anti-Aliasing")
-                        bottomPadding: Youi.Units.smallSpacing
+                        Layout.fillWidth: true
                     }
 
                     Switch {
@@ -368,9 +377,10 @@ ItemPage {
                         checked: fonts.antiAliasing
                         onCheckedChanged: fonts.antiAliasing = checked
                     }
+                    }
+                    }
 
                 }
-            }
             Item {
                 Layout.fillHeight: true
             }

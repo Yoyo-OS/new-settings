@@ -46,7 +46,7 @@ ItemPage {
         ColumnLayout {
             id: layout
             anchors.fill: parent
-            spacing: Youi.Units.largeSpacing * 2
+            spacing: Youi.Units.largeSpacing
 
             RoundedItem {
                 spacing: Youi.Units.largeSpacing * 1.5

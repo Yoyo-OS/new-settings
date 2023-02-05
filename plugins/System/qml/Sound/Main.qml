@@ -82,7 +82,6 @@ ItemPage {
 
             Label {
                 text: qsTr("Output Devices")
-                leftPadding: Youi.Units.largeSpacing
                 bottomPadding: Youi.Units.smallSpacing
                 color: Youi.Theme.disabledTextColor
                 visible: sinks.count >= 1

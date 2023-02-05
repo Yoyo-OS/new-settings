@@ -8,12 +8,13 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Gui Quick REQUIRED Dbus X11Extras)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Gui REQUIRED X11Extras)
 find_package(KF5Config)
 find_package(X11 REQUIRED)
-
+find_package(Libcrypt REQUIRED)
 
 add_library(SystemPlugin SHARED
     ../../include/yoyo-settings/dataObject.h
@@ -48,6 +49,7 @@ target_link_libraries(SystemPlugin PRIVATE
     Qt${QT_VERSION_MAJOR}::DBus
     Qt${QT_VERSION_MAJOR}::X11Extras
     ${X11_LIBRARIES}
+    Libcrypt::Libcrypt
     X11::X11
     X11::Xi
     X11::Xcursor
